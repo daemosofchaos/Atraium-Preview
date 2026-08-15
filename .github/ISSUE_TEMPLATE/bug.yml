@@ -1,0 +1,127 @@
+name: Bug report
+description: Report a reproducible problem in an Atraium preview.
+title: "[Bug]: "
+labels:
+  - bug
+  - preview
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve the Atraium preview.
+
+        Do not include API keys, tokens, passwords, private endpoints, confidential prompts, source code, customer data, or sensitive files.
+
+        Atraium cannot access provider billing accounts or issue provider refunds. Contact the provider for billing disputes. Use this form only to report reproducible application behaviour.
+
+  - type: input
+    id: version
+    attributes:
+      label: Atraium preview version
+      description: Find the version in the application or release name.
+      placeholder: 0.1.0-preview.1
+    validations:
+      required: true
+
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version
+      placeholder: Windows 11 24H2
+    validations:
+      required: true
+
+  - type: dropdown
+    id: distribution
+    attributes:
+      label: Distribution
+      options:
+        - Windows installer
+        - Portable Windows archive
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: provider
+    attributes:
+      label: Provider category
+      description: Do not include account names, keys, or private endpoint URLs.
+      options:
+        - OpenAI
+        - Azure OpenAI
+        - OpenAI-compatible hosted provider
+        - Local or self-hosted compatible endpoint
+        - Not provider-related
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected area
+      multiple: true
+      options:
+        - Installation or startup
+        - Setup and settings
+        - Chat
+        - Utility
+        - Search or grounding
+        - Rooms and messages
+        - Local files or processes
+        - Visual Studio workflows
+        - Documents or presentations
+        - Images
+        - Plugins
+        - MCP
+        - Backup or restore
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the problem and its effect.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open...
+        2. Configure...
+        3. Select...
+        4. Observe...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour
+    validations:
+      required: true
+
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Redacted diagnostics
+      description: Include exact visible errors or minimal logs only after removing sensitive information.
+      render: text
+
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Confirmation
+      options:
+        - label: I am using the latest available preview.
+          required: true
+        - label: I removed credentials, private endpoints, customer data, source code, and other sensitive content.
+          required: true
+        - label: I searched existing issues for the same problem.
+          required: true
