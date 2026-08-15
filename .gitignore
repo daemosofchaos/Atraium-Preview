@@ -1,0 +1,38 @@
+# Release artifacts belong on GitHub Releases, not in Git history.
+/artifacts/
+/releases/
+
+*.exe
+*.msi
+*.msix
+*.appx
+*.zip
+*.apk
+*.pdb
+*.sha256
+SHA256SUMS.txt
+
+# Local configuration and secrets.
+.env
+.env.*
+!.env.example
+*.user
+*.suo
+secrets.json
+appsettings.*.local.json
+
+# Editor and OS state.
+.vs/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Temporary files.
+*.tmp
+*.temp
+*.log
+
+MAINTAINER_SETUP.md
+RELEASE_CHECKLIST.md

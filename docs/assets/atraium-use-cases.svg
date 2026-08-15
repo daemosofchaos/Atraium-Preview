@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  width="1400"
+  height="860"
+  viewBox="0 0 1400 860"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <title>Atraium room examples</title>
+  <desc>
+    Six example Atraium room roles: developer, document, presentation, research,
+    image, and desktop-workflow rooms.
+  </desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1400" y2="860" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5A3F33" />
+      <stop offset="0.55" stop-color="#6A4B3A" />
+      <stop offset="1" stop-color="#8A5C46" />
+    </linearGradient>
+
+    <linearGradient id="tile" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FBF5EF" />
+      <stop offset="1" stop-color="#E8D8CB" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1400" height="860" rx="32" fill="url(#bg)" />
+  <circle cx="1245" cy="100" r="170" fill="#C99843" fill-opacity="0.16" />
+  <circle cx="170" cy="760" r="185" fill="#F4E1CD" fill-opacity="0.10" />
+  <circle cx="1320" cy="746" r="155" fill="#9B8473" fill-opacity="0.10" />
+
+  <!-- Heading -->
+  <text
+    x="80"
+    y="108"
+    fill="#FFF9F4"
+    font-size="48"
+    font-family="Segoe UI, Arial, sans-serif"
+    font-weight="800"
+  >
+    One Atraium platform. Many ways to work.
+  </text>
+
+  <text
+    x="80"
+    y="150"
+    fill="#F4E6DA"
+    font-size="21"
+    font-family="Segoe UI, Arial, sans-serif"
+  >
+    Rooms give assistants an identity; Workspaces give projects instructions and tools.
+  </text>
+
+  <!-- Developer room -->
+  <rect x="80" y="210" width="388" height="188" rx="26" fill="url(#tile)" stroke="#CCB39E" />
+  <rect x="110" y="236" width="38" height="38" rx="11" fill="#C99843" />
+
+  <g
+    transform="translate(117 243)"
+    fill="none"
+    stroke="#4F392E"
+    stroke-width="1.9"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <path d="M8 6 2.5 12 8 18" />
+    <path d="m16 6 5.5 6-5.5 6" />
+    <path d="m13.5 4-3 16" />
+  </g>
+
+  <text
+    x="164"
+    y="260"
+    fill="#8A5C46"
+    font-size="16.5"
+    font-family="Segoe UI, Arial, sans-serif"
+    font-weight="700"
+  >
+    Developer room
+  </text>
+
+  <text
+    x="110"
+    y="312"
+    fill="#4F392E"
+    font-size="26"
+    font-family="Segoe UI, Arial, sans-serif"
+    font-weight="800"
+  >
+    Build with momentum
+  </text>
+
+  <text
+    x="110"
+    y="350"
+    fill="#6B5448"
+    font-size="17"
+    font-family="Segoe UI, Arial, sans-serif"
+  >
+    Plan, build, diagnose, and improve
+  </text>
+
+  <text
+    x="110"
+    y="375"
+    fill="#6B5448"
+    font-size="17"
+    font-family="Segoe UI, Arial, sans-serif"
+  >
+    projects with tools and research.
+  </text>
+
+  <!-- Document studio -->
+  <rect x="506" y="210" width="388" height="188" rx="26" fill="url(#tile)" stroke="#CCB39E" />
+  <rect x="536" y="236" width="38" height="38" rx="11" fill="#B88342" />
+
+  <g
+    transform="translate(543 243)"
+    fill="none"
+    stroke="#4F392E"
+    stroke-width="1.8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <path d="M6 2.5h8l4 4v14H6z" />
+    <path d="M14 2.5v4h4" />
+    <path d="M8.5 12h7" />
+    <path d="M8.5 15.5h5" />
+  </g>
+
+  <text
+    x="590"
+    y="260"
+    fill="#8A5C46"
+    font-size="16.5"
+    font-family="Segoe UI, Arial, sans-serif"
+    font-weight="700"
+  >
+    Document studio
+  </text>
+
+  <text
+    x="536"
+    y="312"
+    fill="#4F392E"
+    font-size="26"
+    font-family="Segoe UI, Arial, sans-serif"
+    font-weight="800"
+  >
+    Make it deliverable
+  </text>
+
+  <text
+    x="536"
+    y="350"
+    fill="#6B5448"
+    font-size="17"
+    font-family="Segoe UI, Arial, sans-serif"
+  >
+    Create reports, PDFs, workbooks,
+  </text>
+
+  <text
+    x="536"
+    y="375"
+    fill="#6B5448"
+    font-size="17"
+    font-family="Segoe UI, Arial, sans-serif"
+  >
+    and polished files worth sharing.
+  </text>
+
+  <!-- Presentation room -->
+  <rect x="932" y="210" width="388" height="188" rx="26" fill="url(#tile)" stroke="#CCB39E" />
+  <rect x="962" y="236" width="38" height="38" rx="11" fill="#8A5C46" />
+
+  <g
+    transform="translate(969 243)"
+    fill="none"
+    stroke="#FFF8F2"
+    stroke-width="1.8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <rect x="2.5" y="3.5" width="19" height="13.5" rx="1.8" />
+    <path d="M12 17v4" />
+    <path d="M8 21h8" />
+    <path d="m7 13 3-3 2.8 2.6 4.2-4.1" />
+  </g>
+
+  <text
+    x="1016"
+    y="260"
+    fill="#8A5C46"
+    font-size="16.5"
+    font-family="Segoe UI, Arial, sans-serif"
+    font-weight="700"
+  >
+    Presentation room
+  </text>
+
+  <text
+    x="962"
+    y="312"
+    fill="#4F392E"
+    font-size="26"
+    font-family="Segoe UI, Arial, sans-serif"
+    font-weight="800"
+  >
+    Tell the story clearly
+  </text>
+
+  <text
+    x="962"
+    y="350"
+    fill="#6B5448"
+    font-size="17"
+    font-family="Segoe UI, Arial, sans-serif"
+  >
+    Turn ideas into slides, charts,
+  </text>
+
+  <text
+    x="962"
+    y="375"
+    fill="#6B5448"
+    font-size="17"
+    font-family="Segoe UI, Arial, sans-serif"
+  >
+    and clear visual stories.
+  </text>
+
+  <!-- Research room -->
+  <rect x="80" y="418" width="388" height="188" rx="26" fill="url(#tile)" stroke="#CCB39E" />
+  <rect x="110" y="444" width="38" height="38" rx="11" fill="#9B8473" />
+
+  <g
+    transform="translate(117 451)"
+    fill="none"
+    stroke="#FFF8F2"
+    stroke-width="1.7"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <path d="M5 2.5h8l3.5 3.5v6" />
+    <path d="M13 2.5V6h3.5" />
+    <path d="M7.5 10h4.5" />
+    <circle cx="15.5" cy="15.5" r="3.5" />
+    <path d="m18 18 2.5 2.5" />
+  </g>
+
+  <text
+    x="164"
+    y="468"
+    fill="#8A5C46"
+    font-size="16.5"
+    font-family="Segoe UI, Arial, sans-serif"
+    font-weight="700"
+  >
+    Research room
+  </text>
+
+  <text
+    x="110"
+    y="520"
+    fill="#4F392E"
+    font-size="26"
+    font-family="Segoe UI, Arial, sans-serif"
+    font-weight="800"
+  >
+    Find what holds up
+  </text>
+
+  <text
+    x="110"
+    y="558"
+    fill="#6B5448"
+    font-size="17"
+    font-family="Segoe UI, Arial, sans-serif"
+  >
+    Search, compare, verify, and cite
+  </text>
+
+  <text
+    x="110"
+    y="583"
+    fill="#6B5448"
+    font-size="17"
+    font-family="Segoe UI, Arial, sans-serif"
+  >
+    the sources behind a decision.
+  </text>
+
+  <!-- Creative image room -->
+  <rect x="506" y="418" width="388" height="188" rx="26" fill="url(#tile)" stroke="#CCB39E" />
+  <rect x="536" y="444" width="38" height="38" rx="11" fill="#C3924F" />
+
+  <g
+    transform="translate(543 451)"
+    fill="none"
+    stroke="#4F392E"
+    stroke-width="1.8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <rect x="2.5" y="3.5" width="19" height="17" rx="2" />
+    <circle cx="9" cy="9" r="1.5" />
+    <path d="m5.5 17 4.2-4.5 3 3 2.2-2.2 3.5 3.7" />
+  </g>
+
+  <text
+    x="590"
+    y="468"
+    fill="#8A5C46"
+    font-size="16.5"
+    font-family="Segoe UI, Arial, sans-serif"
+    font-weight="700"
+  >
+    Creative image lab
+  </text>
+
+  <text
+    x="536"
+    y="520"
+    fill="#4F392E"
+    font-size="26"
+    font-family="Segoe UI, Arial, sans-serif"
+    font-weight="800"
+  >
+    Make visuals matter
+  </text>
+
+  <text
+    x="536"
+    y="558"
+    fill="#6B5448"
+    font-size="17"
+    font-family="Segoe UI, Arial, sans-serif"
+  >
+    Generate, edit, and refine images
+  </text>
+
+  <text
+    x="536"
+    y="583"
+    fill="#6B5448"
+    font-size="17"
+    font-family="Segoe UI, Arial, sans-serif"
+  >
+    for concepts, decks, and documents.
+  </text>
+
+  <!-- Desktop workflow room -->
+  <rect x="932" y="418" width="388" height="188" rx="26" fill="url(#tile)" stroke="#CCB39E" />
+  <rect x="962" y="444" width="38" height="38" rx="11" fill="#714E3D" />
+
+  <g
+    transform="translate(969 451)"
+    fill="none"
+    stroke="#FFF8F2"
+    stroke-width="1.8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <rect x="2.5" y="3.5" width="19" height="13.5" rx="1.8" />
+    <path d="M12 17v4" />
+    <path d="M8 21h8" />
+    <path d="M7 8h5" />
+    <path d="M7 11h8" />
+  </g>
+
+  <text
+    x="1016"
+    y="468"
+    fill="#8A5C46"
+    font-size="16.5"
+    font-family="Segoe UI, Arial, sans-serif"
+    font-weight="700"
+  >
+    Desktop workflow room
+  </text>
+
+  <text
+    x="962"
+    y="520"
+    fill="#4F392E"
+    font-size="26"
+    font-family="Segoe UI, Arial, sans-serif"
+    font-weight="800"
+  >
+    Carry work through
+  </text>
+
+  <text
+    x="962"
+    y="558"
+    fill="#6B5448"
+    font-size="17"
+    font-family="Segoe UI, Arial, sans-serif"
+  >
+    Work with files, processes, windows,
+  </text>
+
+  <text
+    x="962"
+    y="583"
+    fill="#6B5448"
+    font-size="17"
+    font-family="Segoe UI, Arial, sans-serif"
+  >
+    and hands-on computer-use flows.
+  </text>
+
+  <!-- Combined workflow callout -->
+  <rect
+    x="80"
+    y="660"
+    width="1240"
+    height="132"
+    rx="28"
+    fill="#F4E9DD"
+    fill-opacity="0.94"
+    stroke="#CCB39E"
+  />
+
+  <text
+    x="120"
+    y="706"
+    fill="#8A5C46"
+    font-size="17"
+    font-family="Segoe UI, Arial, sans-serif"
+    font-weight="700"
+  >
+    One assistant can manage several projects
+  </text>
+
+  <text
+    x="120"
+    y="749"
+    fill="#4F392E"
+    font-size="27"
+    font-family="Segoe UI, Arial, sans-serif"
+    font-weight="800"
+  >
+    Research the facts → write the brief → create visuals → build the deck
+  </text>
+
+  <text
+    x="120"
+    y="776"
+    fill="#6B5448"
+    font-size="17"
+    font-family="Segoe UI, Arial, sans-serif"
+  >
+    Keep the chain in one Workspace, or split it into focused project desks.
+  </text>
+</svg>
