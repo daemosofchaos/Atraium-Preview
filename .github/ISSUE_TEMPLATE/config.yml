@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Atraium preview discussions
+    url: https://github.com/daemosofchaos/Atraium-Preview/discussions
+    about: Ask general questions and discuss workflows after Discussions is enabled.
+  - name: Security reports
+    url: https://github.com/daemosofchaos/Atraium-Preview/security/advisories/new
+    about: Report suspected vulnerabilities privately. Do not disclose vulnerabilities in public issues.

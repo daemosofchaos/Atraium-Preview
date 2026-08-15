@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  width="1400"
+  height="820"
+  viewBox="0 0 1400 820"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <title>Atraium platform overview</title>
+  <desc>
+    A diagram showing a reusable model profile flowing into an assistant Room,
+    which can use research, desktop, developer, document, image, plugin, MCP, and computer-use capabilities.
+  </desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1400" y2="820" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5A3F33" />
+      <stop offset="0.55" stop-color="#6A4B3A" />
+      <stop offset="1" stop-color="#8A5C46" />
+    </linearGradient>
+
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FBF5EF" />
+      <stop offset="1" stop-color="#E9D8C9" />
+    </linearGradient>
+
+    <linearGradient id="core" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#F4E9DD" />
+      <stop offset="1" stop-color="#DFC8B6" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1400" height="820" rx="32" fill="url(#bg)" />
+  <circle cx="1240" cy="110" r="180" fill="#C99843" fill-opacity="0.16" />
+  <circle cx="1340" cy="730" r="200" fill="#9B8473" fill-opacity="0.12" />
+  <circle cx="150" cy="760" r="190" fill="#F4E1CD" fill-opacity="0.10" />
+
+  <!-- Heading -->
+  <text
+    x="80"
+    y="98"
+    fill="#FFF9F4"
+    font-size="46"
+    font-family="Segoe UI, Arial, sans-serif"
+    font-weight="800"
+  >
+    How Atraium fits together
+  </text>
+
+  <text
+    x="80"
+    y="136"
+    fill="#F5E9DE"
+    font-size="19"
+    font-family="Segoe UI, Arial, sans-serif"
+  >
+    Connect a model profile. Give the assistant an identity, instructions, and a Room.
+  </text>
+
+  <text
+    x="80"
+    y="164"
+    fill="#F5E9DE"
+    font-size="19"
+    font-family="Segoe UI, Arial, sans-serif"
+  >
+    Add Workspaces, selected tools, tasks, notes, files, and results.
+  </text>
+
+  <!-- Bring-your-own-model card -->
+  <rect
+    x="80"
+    y="230"
+    width="300"
+    height="278"
+    rx="28"
+    fill="url(#card)"
+    stroke="#CDB19A"
+  />
+
+  <rect x="112" y="254" width="40" height="40" rx="12" fill="#C99843" />
+
+  <!-- Model / endpoint icon -->
+  <g
+    transform="translate(120 262)"
+    fill="none"
+    stroke="#4F392E"
+    stroke-width="1.9"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <rect x="2.5" y="4" width="19" height="15.5" rx="2.5" />
+    <path d="M7 9h10" />
+    <path d="M7 13h5" />
+    <circle cx="17.5" cy="13" r="1" fill="#4F392E" stroke="none" />
+  </g>
+
+  <text
+    x="168"
+    y="280"
+    fill="#8A5C46"
+    font-size="15.5"
+    font-family="Segoe UI, Arial, sans-serif"
+    font-weight="700"
+  >
+    Reusable model profile
+  </text>
+
+  <text
+    x="112"
+    y="330"
+    fill="#4F392E"
+    font-size="16"
+    font-family="Segoe UI, Arial, sans-serif"
+    font-weight="800"
+  >
+    OpenAI-compatible endpoint
+  </text>
+
+  <text
+    x="112"
+    y="359"
+    fill="#6B5448"
+    font-size="15"
+    font-family="Segoe UI, Arial, sans-serif"
+  >
+    Hosted, Azure, local, or
+  </text>
+
+  <text
+    x="112"
+    y="382"
+    fill="#6B5448"
+    font-size="15"
+    font-family="Segoe UI, Arial, sans-serif"
+  >
+    self-hosted—your choice.
+  </text>
+
+  <path d="M112 402H348" stroke="#D9C2AF" stroke-width="1" />
+
+  <text
+    x="112"
+    y="428"
+    fill="#8A5C46"
+    font-size="14.5"
+    font-family="Segoe UI, Arial, sans-serif"
+    font-weight="700"
+  >
+    Build the assistant
+  </text>
+
+  <rect x="112" y="444" width="66" height="36" rx="18" fill="#6A4B3A" />
+  <text
+    x="145"
+    y="468"
+    text-anchor="middle"
+    fill="#FFF8F2"
+    font-size="14"
+    font-family="Segoe UI, Arial, sans-serif"
+    font-weight="700"
+  >
+    Profile
+  </text>
+
+  <rect x="186" y="444" width="76" height="36" rx="18" fill="#6A4B3A" />
+  <text
+    x="224"
+    y="468"
+    text-anchor="middle"
+    fill="#FFF8F2"
+    font-size="14"
+    font-family="Segoe UI, Arial, sans-serif"
+    font-weight="700"
+  >
+    Tools
+  </text>
+
+  <rect x="270" y="444" width="78" height="36" rx="18" fill="#6A4B3A" />
+  <text
+    x="309"
+    y="468"
+    text-anchor="middle"
+    fill="#FFF8F2"
+    font-size="14"
+    font-family="Segoe UI, Arial, sans-serif"
+    font-weight="700"
+  >
+    Projects
+  </text>
+
+  <!-- Model-to-room arrow -->
+  <path d="M380 372H480" stroke="#E5C071" stroke-width="6" stroke-linecap="round" />
+  <path d="M460 354L500 372L460 390" fill="#E5C071" />
+
+  <!-- Atraium room -->
+  <rect
+    x="500"
+    y="198"
+    width="380"
+    height="372"
+    rx="32"
+    fill="url(#core)"
+    stroke="#D3B59A"
+  />
+
+  <text
+    x="690"
+    y="248"
+    text-anchor="middle"
+    fill="#8A5C46"
+    font-size="14"
+    font-family="Segoe UI, Arial, sans-serif"
+    font-weight="700"
+    letter-spacing="1.4"
+  >
+    ASSISTANT ROOM
+  </text>
+
+  <text
+    x="690"
+    y="306"
+    text-anchor="middle"
+    fill="#4F392E"
+    font-size="42"
+    font-family="Segoe UI, Arial, sans-serif"
+    font-weight="800"
+  >
+    Atraium
+  </text>
+
+  <text
+    x="690"
+    y="342"
+    text-anchor="middle"
+    fill="#6B5448"
+    font-size="19"
+    font-family="Segoe UI, Arial, sans-serif"
+  >
+    Your assistant, shaped for the job.
+  </text>
+
+  <text
+    x="690"
+    y="384"
+    text-anchor="middle"
+    fill="#6B5448"
+    font-size="16"
+    font-family="Segoe UI, Arial, sans-serif"
+  >
+    Give it a name and personality,
+  </text>
+
+  <text
+    x="690"
+    y="408"
+    text-anchor="middle"
+    fill="#6B5448"
+    font-size="16"
+    font-family="Segoe UI, Arial, sans-serif"
+  >
+    or a full system prompt.
+  </text>
+
+  <text
+    x="690"
+    y="434"
+    text-anchor="middle"
+    fill="#6B5448"
+    font-size="16"
+    font-family="Segoe UI, Arial, sans-serif"
+  >
+    Choose the tools and context it needs.
+  </text>
+
+  <rect x="524" y="472" width="158" height="38" rx="19" fill="#6A4B3A" />
+  <text
+    x="603"
+    y="497"
+    text-anchor="middle"
+    fill="#FFF8F2"
+    font-size="15"
+    font-family="Segoe UI, Arial, sans-serif"
+    font-weight="700"
+  >
+    Personality
+  </text>
+
+  <rect x="698" y="472" width="158" height="38" rx="19" fill="#6A4B3A" />
+  <text
+    x="777"
+    y="497"
+    text-anchor="middle"
+    fill="#FFF8F2"
+    font-size="15"
+    font-family="Segoe UI, Arial, sans-serif"
+    font-weight="700"
+  >
+    Tools
+  </text>
+
+  <rect x="524" y="522" width="158" height="38" rx="19" fill="#6A4B3A" />
+  <text
+    x="603"
+    y="547"
+    text-anchor="middle"
+    fill="#FFF8F2"
+    font-size="15"
+    font-family="Segoe UI, Arial, sans-serif"
+    font-weight="700"
+  >
+    Memory
+  </text>
+
+  <rect x="698" y="522" width="158" height="38" rx="19" fill="#6A4B3A" />
+  <text
+    x="777"
+    y="547"
+    text-anchor="middle"
+    fill="#FFF8F2"
+    font-size="15"
+    font-family="Segoe UI, Arial, sans-serif"
+    font-weight="700"
+  >
+    Outputs
+  </text>
+
+  <!-- Room-to-capabilities arrow -->
+  <path d="M880 372H960" stroke="#E5C071" stroke-width="6" stroke-linecap="round" />
+  <path d="M940 354L980 372L940 390" fill="#E5C071" />
+
+  <!-- Capability heading -->
+  <text
+    x="980"
+    y="160"
+    fill="#F5E9DE"
+    font-size="14"
+    font-family="Segoe UI, Arial, sans-serif"
+    font-weight="700"
+    letter-spacing="1.4"
+  >
+    TOOLS &amp; CAPABILITIES
+  </text>
+
+  <!-- Research and grounding -->
+  <rect x="980" y="184" width="340" height="104" rx="24" fill="url(#card)" stroke="#CDB19A" />
+  <rect x="1004" y="206" width="36" height="36" rx="11" fill="#9B8473" />
+
+  <g
+    transform="translate(1010 212)"
+    fill="none"
+    stroke="#FFF8F2"
+    stroke-width="1.7"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <path d="M5 2.5h8l3.5 3.5v6" />
+    <path d="M13 2.5V6h3.5" />
+    <path d="M7.5 10h4.5" />
+    <circle cx="15.5" cy="15.5" r="3.5" />
+    <path d="m18 18 2.5 2.5" />
+  </g>
+
+  <text
+    x="1056"
+    y="222"
+    fill="#8A5C46"
+    font-size="17"
+    font-family="Segoe UI, Arial, sans-serif"
+    font-weight="800"
+  >
+    Research &amp; grounding
+  </text>
+
+  <text
+    x="1056"
+    y="252"
+    fill="#4F392E"
+    font-size="14"
+    font-family="Segoe UI, Arial, sans-serif"
+  >
+    Search, retrieve, verify,
+  </text>
+
+  <text
+    x="1056"
+    y="273"
+    fill="#4F392E"
+    font-size="14"
+    font-family="Segoe UI, Arial, sans-serif"
+  >
+    and cite useful sources.
+  </text>
+
+  <!-- Local workbench -->
+  <rect x="980" y="298" width="340" height="104" rx="24" fill="url(#card)" stroke="#CDB19A" />
+  <rect x="1004" y="320" width="36" height="36" rx="11" fill="#714E3D" />
+
+  <g
+    transform="translate(1010 326)"
+    fill="none"
+    stroke="#FFF8F2"
+    stroke-width="1.8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <rect x="2.5" y="3.5" width="19" height="13.5" rx="1.8" />
+    <path d="M12 17v4" />
+    <path d="M8 21h8" />
+    <path d="M7 8h5" />
+    <path d="M7 11h8" />
+  </g>
+
+  <text
+    x="1056"
+    y="336"
+    fill="#8A5C46"
+    font-size="17"
+    font-family="Segoe UI, Arial, sans-serif"
+    font-weight="800"
+  >
+    Local workbench
+  </text>
+
+  <text
+    x="1056"
+    y="366"
+    fill="#4F392E"
+    font-size="14"
+    font-family="Segoe UI, Arial, sans-serif"
+  >
+    Files, folders, processes,
+  </text>
+
+  <text
+    x="1056"
+    y="387"
+    fill="#4F392E"
+    font-size="14"
+    font-family="Segoe UI, Arial, sans-serif"
+  >
+    windows, shells, and screenshots.
+  </text>
+
+  <!-- Developer workflows -->
+  <rect x="980" y="412" width="340" height="104" rx="24" fill="url(#card)" stroke="#CDB19A" />
+  <rect x="1004" y="434" width="36" height="36" rx="11" fill="#C99843" />
+
+  <g
+    transform="translate(1010 440)"
+    fill="none"
+    stroke="#4F392E"
+    stroke-width="1.9"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <path d="M8 6 2.5 12 8 18" />
+    <path d="m16 6 5.5 6-5.5 6" />
+    <path d="m13.5 4-3 16" />
+  </g>
+
+  <text
+    x="1056"
+    y="450"
+    fill="#8A5C46"
+    font-size="17"
+    font-family="Segoe UI, Arial, sans-serif"
+    font-weight="800"
+  >
+    Developer workflows
+  </text>
+
+  <text
+    x="1056"
+    y="480"
+    fill="#4F392E"
+    font-size="14"
+    font-family="Segoe UI, Arial, sans-serif"
+  >
+    Visual Studio, builds, diagnostics,
+  </text>
+
+  <text
+    x="1056"
+    y="501"
+    fill="#4F392E"
+    font-size="14"
+    font-family="Segoe UI, Arial, sans-serif"
+  >
+    and iterative code changes.
+  </text>
+
+  <!-- Documents and images -->
+  <rect x="980" y="526" width="340" height="104" rx="24" fill="url(#card)" stroke="#CDB19A" />
+  <rect x="1004" y="548" width="36" height="36" rx="11" fill="#B88342" />
+
+  <g
+    transform="translate(1010 554)"
+    fill="none"
+    stroke="#4F392E"
+    stroke-width="1.8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <path d="M6 2.5h8l4 4v14H6z" />
+    <path d="M14 2.5v4h4" />
+    <path d="M8.5 12h7" />
+    <path d="M8.5 15.5h5" />
+  </g>
+
+  <text
+    x="1056"
+    y="564"
+    fill="#8A5C46"
+    font-size="17"
+    font-family="Segoe UI, Arial, sans-serif"
+    font-weight="800"
+  >
+    Documents &amp; images
+  </text>
+
+  <text
+    x="1056"
+    y="594"
+    fill="#4F392E"
+    font-size="14"
+    font-family="Segoe UI, Arial, sans-serif"
+  >
+    Word, PDF, Excel, PowerPoint,
+  </text>
+
+  <text
+    x="1056"
+    y="615"
+    fill="#4F392E"
+    font-size="14"
+    font-family="Segoe UI, Arial, sans-serif"
+  >
+    images, and polished deliverables.
+  </text>
+
+  <!-- Plugins and expansion -->
+  <rect x="980" y="640" width="340" height="104" rx="24" fill="url(#card)" stroke="#CDB19A" />
+  <rect x="1004" y="662" width="36" height="36" rx="11" fill="#8A5C46" />
+
+  <g
+    transform="translate(1010 668)"
+    fill="none"
+    stroke="#FFF8F2"
+    stroke-width="1.8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <path d="M9.5 3h4v4.2a3 3 0 1 1 0 5.6V17h-4v-4.2a3 3 0 1 1 0-5.6z" />
+    <path d="M9.5 7.2H5.3V3H2.5v4.2a3 3 0 1 0 0 5.6V17h2.8v4h4.2" />
+    <path d="M13.5 17h4.2v-4.2a3 3 0 1 0 0-5.6V3h-4.2" />
+  </g>
+
+  <text
+    x="1056"
+    y="678"
+    fill="#8A5C46"
+    font-size="17"
+    font-family="Segoe UI, Arial, sans-serif"
+    font-weight="800"
+  >
+    Plugins &amp; expansion
+  </text>
+
+  <text
+    x="1056"
+    y="708"
+    fill="#4F392E"
+    font-size="14"
+    font-family="Segoe UI, Arial, sans-serif"
+  >
+    Plugins, MCP servers, and
+  </text>
+
+  <text
+    x="1056"
+    y="729"
+    fill="#4F392E"
+    font-size="14"
+    font-family="Segoe UI, Arial, sans-serif"
+  >
+    computer-use handoff.
+  </text>
+</svg>
