@@ -1,0 +1,88 @@
+name: Preview feedback
+description: Share structured feedback about an Atraium workflow or experience.
+title: "[Feedback]: "
+labels:
+  - feedback
+  - preview
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Useful feedback describes a real workflow, what helped, and what prevented you from completing it.
+
+        Keep all provider credentials, private data, confidential prompts, and sensitive files out of this report.
+
+  - type: input
+    id: version
+    attributes:
+      label: Atraium preview version
+      placeholder: 0.1.0-preview.1
+    validations:
+      required: true
+
+  - type: dropdown
+    id: workflow
+    attributes:
+      label: Workflow
+      options:
+        - First-run setup
+        - General assistant or planning
+        - Research and grounding
+        - Software development
+        - Documents or reports
+        - Spreadsheets
+        - Presentations
+        - Image generation or editing
+        - Local desktop workflow
+        - Plugins or MCP
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: What were you trying to accomplish?
+    validations:
+      required: true
+
+  - type: textarea
+    id: worked
+    attributes:
+      label: What worked well?
+    validations:
+      required: true
+
+  - type: textarea
+    id: friction
+    attributes:
+      label: What created friction or stopped you?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: return
+    attributes:
+      label: Would you use Atraium again for this workflow?
+      options:
+        - Yes
+        - Maybe, with improvements
+        - No
+        - Not sure yet
+    validations:
+      required: true
+
+  - type: textarea
+    id: improvement
+    attributes:
+      label: What single improvement would matter most?
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      options:
+        - label: I removed credentials and all sensitive or confidential information.
+          required: true
