@@ -36,7 +36,7 @@ Compare the SHA-256 hash of the exact file you downloaded with the matching file
 On Windows, PowerShell can calculate a hash with:
 
 ```powershell
-Get-FileHash .\Atraium-0.4.0-preview.1-win-x64-setup.exe -Algorithm SHA256
+Get-FileHash .\Atraium-0.4.0-preview.2-win-x64-setup.exe -Algorithm SHA256
 ```
 
 For an Android APK, use a SHA-256 tool you trust on the device or computer where it was downloaded.
