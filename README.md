@@ -8,18 +8,18 @@
 
 [**atraium.com**](https://atraium.com) is the official Atraium website. Trusted preview downloads are published through this repository and its GitHub Releases page.
 
-The current Windows and Android preview is **[Atraium 0.4.1 Preview 1](https://github.com/daemosofchaos/Atraium-Preview/releases/tag/v0.4.1-preview.1)**.
+The current Windows and Android preview is **[Atraium 0.4.2 Preview 1](https://github.com/daemosofchaos/Atraium-Preview/releases/tag/v0.4.2-preview.1)**.
 
 | Download | Purpose |
 |---|---|
-| [Windows x64 installer (.exe)](https://github.com/daemosofchaos/Atraium-Preview/releases/download/v0.4.1-preview.1/Atraium-0.4.1-preview.1-win-x64-setup.exe) | Install Atraium for the current Windows user. |
-| [Portable Windows x64 archive (.zip)](https://github.com/daemosofchaos/Atraium-Preview/releases/download/v0.4.1-preview.1/Atraium-0.4.1-preview.1-win-x64-portable.zip) | Extract and run Atraium without an installer. |
-| [Android APK](https://github.com/daemosofchaos/Atraium-Preview/releases/download/v0.4.1-preview.1/Atraium-0.4.1-preview.1-android.apk) | Sideload on Android 7.0+ devices with arm64-v8a or x86_64 support. |
-| [Android preview bundle (.zip)](https://github.com/daemosofchaos/Atraium-Preview/releases/download/v0.4.1-preview.1/Atraium-0.4.1-preview.1-android-preview.zip) | Get the same APK together with preview, privacy, security, and billing documents. |
-| [SHA-256 checksums](https://github.com/daemosofchaos/Atraium-Preview/releases/download/v0.4.1-preview.1/Atraium-0.4.1-preview.1-SHA256SUMS.txt) | Verify the exact installer, archive, or APK before running it. |
+| [Windows x64 installer (.exe)](https://github.com/daemosofchaos/Atraium-Preview/releases/download/v0.4.2-preview.1/Atraium-0.4.2-preview.1-win-x64-setup.exe) | Install Atraium for the current Windows user. |
+| [Portable Windows x64 archive (.zip)](https://github.com/daemosofchaos/Atraium-Preview/releases/download/v0.4.2-preview.1/Atraium-0.4.2-preview.1-win-x64-portable.zip) | Extract and run Atraium without an installer. |
+| [Android APK](https://github.com/daemosofchaos/Atraium-Preview/releases/download/v0.4.2-preview.1/Atraium-0.4.2-preview.1-android.apk) | Sideload on Android 7.0+ devices with arm64-v8a or x86_64 support. |
+| [Android preview bundle (.zip)](https://github.com/daemosofchaos/Atraium-Preview/releases/download/v0.4.2-preview.1/Atraium-0.4.2-preview.1-android-preview.zip) | Get the same APK together with preview, privacy, security, and billing documents. |
+| [SHA-256 checksums](https://github.com/daemosofchaos/Atraium-Preview/releases/download/v0.4.2-preview.1/Atraium-0.4.2-preview.1-SHA256SUMS.txt) | Verify the exact installer, archive, or APK before running it. |
 | [All preview releases](https://github.com/daemosofchaos/Atraium-Preview/releases) | Browse release history and future downloads. |
 
-Read [Getting started](GETTING-STARTED.md) before connecting a provider. See the [0.4.1 Preview 1 release notes](release-notes/v0.4.1-preview.1.md) for version-specific details.
+Read [Getting started](GETTING-STARTED.md) before connecting a provider. See the [0.4.2 Preview 1 release notes](release-notes/v0.4.2-preview.1.md) for version-specific details.
 
 > **Provider costs:** Atraium uses the accounts, endpoints, and credentials you configure. You are responsible for the resulting provider and infrastructure charges. Set provider-side limits and read [Token usage and provider billing](TOKEN-USAGE-AND-BILLING.md) before using paid services.
 
