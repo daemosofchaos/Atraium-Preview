@@ -1,114 +1,65 @@
-# Preview support
+# Help and support
 
-Atraium preview support is community-style and best-effort. There is no service-level agreement or guaranteed response time.
+Start with the guide closest to the problem:
 
-## Start with the product model
+| Need help with… | Guide |
+|---|---|
+| Installation or first setup | [Getting started](GETTING-STARTED.md) |
+| OpenAI, Claude, Gemini, Azure or a custom endpoint | [Model setup](docs/model-setup.md) |
+| LM Studio, Ollama or a server used from Android | [Local models](docs/local-models.md) |
+| Workspaces, tools and folder access | [Workspaces and tools](docs/workspaces-and-tools.md) |
+| PDFs, visuals or saving existing work | [Documents and exports](docs/documents-and-exports.md) |
+| Images or speech | [Images and voice](docs/images-and-voice.md) |
+| An error or an unexpected result | [Troubleshooting](docs/troubleshooting.md) |
 
-When describing a problem, identify where it occurs:
+Preview support is best-effort, with no service-level agreement or guaranteed response time.
 
-- **Model profile:** the provider, endpoint, API mode, model, credentials, or capability route.
-- **Room:** the assistant identity, base instructions, default model, or baseline tool policy.
-- **Workspace:** the project instructions, model override, tool selection, conversation, notes, tasks, files, or results.
-- **Tool or extension:** a built-in operation, tool source, MCP server, or plugin.
+## Report a bug or suggest an improvement
 
-This is more useful than reporting only that “the assistant did not work.”
+Use [GitHub Issues](https://github.com/daemosofchaos/Atraium-Preview/issues) for reproducible bugs, installation failures, documentation corrections and focused feedback. Search existing issues first.
 
-## Use Discussions for
+For a bug, include:
 
-- general questions;
-- assistant and prompt approaches;
-- workflow ideas;
-- sharing non-sensitive experiences;
-- understanding whether behaviour is expected.
+- Atraium version and package: Windows installer/portable, Android APK/bundle;
+- operating system version and, for Android, device model;
+- affected area: connection, Chat, workspace, tool, document or media;
+- provider category, API mode and model ID if safe to disclose;
+- the smallest steps that reproduce it;
+- expected result, actual result and exact visible error;
+- whether the issue happens consistently.
 
-If GitHub Discussions becomes available for this repository, use it for these broader questions. Until then, use an issue only when the question is specific and actionable.
+For a tool problem, include its visible source/action and whether it uses Direct or Gateway. For a local model, identify the serving application, model and relevant context/quantization settings when safe to share.
 
-## Use Issues for
+For a suggestion, explain what you wanted to accomplish, what got in the way and what would make the result useful. A concrete example is more helpful than a feature name alone.
 
-- reproducible bugs;
-- installation failures;
-- provider or model-profile errors with credentials removed;
-- broken or misleading documentation;
-- focused product feedback grounded in a real workflow.
+## Before retrying
 
-Open an issue at [Atraium Preview Issues](https://github.com/daemosofchaos/Atraium-Preview/issues).
+Check the affected profile and capability assignment. Try a short, low-risk request to distinguish a connection problem from tool use or a large input. Check provider quota and rejected-request details when available.
 
-## Before reporting a bug
+Tests, retries and requests that fail or are interrupted may still be billable. Stop an unproductive repeated attempt before investigating. Do not delete application data or reset saved projects as a first repair step.
 
-1. Confirm you are using the latest preview.
-2. Restart Atraium and retry the smallest failing workflow.
-3. Run **Test connection** for the affected model profile.
-4. Try a low-risk prompt without tools to separate model connectivity from tool behaviour.
-5. Check whether the issue follows the model profile, Room, Workspace, tool source, or specialist capability.
-6. If possible, reproduce it in a temporary Workspace with minimal instructions and permissions.
-7. Review the provider dashboard for rejected requests, rate limits, quota, or billing errors.
-8. Remove credentials and sensitive content from logs and screenshots.
-9. Search existing issues for the same symptom.
+## Keep reports safe to share
 
-## What to include
+GitHub issues and pull requests are public. Remove:
 
-- Atraium preview version;
-- Windows version or Android device and Android version;
-- installer, portable archive, direct APK, or Android bundle;
-- provider category and API mode, without credentials or private endpoints;
-- model or deployment name when it is safe to disclose;
-- whether the problem affects a model profile, Room, Workspace, tool source, MCP server, or specialist capability;
-- minimal steps to reproduce;
-- expected result;
-- actual result and exact visible error;
-- whether it happens consistently;
-- whether the same task works with a different compatible model profile.
+- API keys, passwords, tokens and credential files;
+- private endpoints, signed URLs and account identifiers;
+- confidential conversations, instructions, notes and tasks;
+- customer, employee and personal information;
+- proprietary code, sensitive file paths and unredacted logs/screenshots.
 
-## What not to include
+Use sample data and a minimal reproduction instead of uploading a whole private project.
 
-Never publish:
+**Security vulnerability?** Do not post exploit details publicly. Follow the [private-reporting guidance](SECURITY.md#reporting-a-vulnerability).
 
-- API keys, tokens, passwords, or credential files;
-- private endpoints or signed URLs;
-- customer, employee, or personal data;
-- confidential instructions, prompts, conversations, notes, or tasks;
-- proprietary source code;
-- sensitive files, screenshots, or full unredacted logs.
+## Provider account and billing help
 
-## Model and provider compatibility
+Atraium cannot access your provider account, change its quota or issue refunds. Contact the provider for charges, credits, account access and billing disputes. Provider records are authoritative.
 
-A successful connection test does not guarantee that every model supports:
+Report an Atraium issue only for reproducible application behavior that appears to cause unexpected or repeated requests, with credentials and sensitive content removed. See [Token usage and provider billing](TOKEN-USAGE-AND-BILLING.md).
 
-- streaming;
-- high-context requests;
-- reasoning metadata;
-- the provider's exact tool-call format;
-- every built-in tool description;
-- images, audio, realtime interaction, or specialist routes.
+## Share documentation improvements
 
-Include the serving stack, API mode, model, quantization, and chat template when they are relevant and safe to disclose.
+Documentation corrections can be submitted as focused pull requests. See [Contributing feedback](CONTRIBUTING.md).
 
-## Tool and extension issues
-
-For a tool-related problem, include:
-
-- the tool source and operation name;
-- whether it was routed directly or through the searchable gateway;
-- the Room or Workspace policy involved;
-- the smallest non-sensitive input that reproduces it;
-- whether the operation ran, failed, or produced an unexpected result.
-
-For MCP or plugin issues, identify the integration and transport without publishing secrets.
-
-## Provider billing issues
-
-Atraium does not process provider billing and cannot access your provider account. Billing disputes, refunds, quota changes, and account-specific usage records must be handled with the provider.
-
-Use an Atraium issue only for reproducible application behaviour that appears to cause unexpected or repeated requests. Remove credentials, billing identifiers, private prompts, and provider logs before posting.
-
-Read [Token usage and provider billing](TOKEN-USAGE-AND-BILLING.md).
-
-## Feature requests
-
-Describe the workflow rather than only naming a feature:
-
-- what you were trying to accomplish;
-- which model, assistant, tools, and working context were involved;
-- why the current experience was insufficient;
-- what a successful outcome would look like;
-- whether you would use it repeatedly.
+[Documentation](docs/README.md) · [Preview scope](PREVIEW.md) · [Privacy](PRIVACY.md)

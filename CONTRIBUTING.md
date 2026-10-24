@@ -1,32 +1,25 @@
-# Contributing preview feedback
+# Contribute feedback and documentation
 
-This repository currently tracks the Atraium binary preview, public documentation, and user feedback. It is not the Atraium application source repository.
+Useful feedback helps make Atraium easier to use. We welcome reproducible bug reports, installation and setup feedback, accessibility observations, documentation corrections and examples of real tasks that could work better.
 
-## Useful contributions
+## Share an experience
 
-- reproducible bug reports;
-- documentation corrections;
-- clear first-run feedback from connecting a model through creating an assistant Room and first Workspace;
-- descriptions of model, assistant, tool, and project workflows that succeeded or failed;
-- accessibility and usability observations;
-- focused suggestions grounded in a real use case.
+Describe what you wanted to accomplish, which part helped and what prevented a useful result. Include your preview version and platform. For a bug, add the smallest reproduction and exact visible error.
 
-## Application code changes
+Use [GitHub Issues](https://github.com/daemosofchaos/Atraium-Preview/issues) and follow [Support](SUPPORT.md). Search existing reports before opening a new one.
 
-Application-source pull requests cannot be accepted through this repository because the application source is not part of the preview repository.
+## Improve a guide
 
-Documentation corrections may be submitted as pull requests. Keep changes focused and explain why they improve the preview experience.
+Documentation corrections can be submitted as focused pull requests. Check links, explain the user-facing improvement and keep examples realistic. Use sample values instead of credentials or customer data.
 
-## Sensitive information
+Good examples help someone install the app, connect an available model, complete a practical task or understand a limitation. Avoid presenting unavailable features as part of the current download.
 
-Do not include provider credentials, private endpoints, confidential prompts, customer information, source code, or sensitive files in issues, discussions, commits, or pull requests.
+This repository contains preview downloads and public documentation, not the application source. Application-source pull requests cannot be accepted here.
 
-## Feedback quality
+## Keep contributions safe
 
-Good feedback explains:
+Do not include API keys, private endpoints, confidential conversations, customer data, proprietary code, sensitive logs or private files in issues or pull requests.
 
-1. what you attempted;
-2. what you expected;
-3. what happened;
-4. whether it is reproducible;
-5. what would make the workflow useful enough to repeat.
+Report vulnerabilities privately using [Security](SECURITY.md), not in a public issue.
+
+[Documentation](docs/README.md) · [Preview scope](PREVIEW.md) · [Binary preview terms](BINARY-PREVIEW-TERMS.md)

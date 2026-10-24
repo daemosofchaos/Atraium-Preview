@@ -43,13 +43,15 @@ Use a temporary, low-risk Workspace while learning the preview. Keep backups and
 
 ## Tool access
 
-Atraium includes more than 200 built-in tool operations across supported platforms and integrations. Do not expose the full catalog to every assistant by default.
+Atraium's built-in tools and integrations can have real effects. Enable only what the assistant needs.
 
 - Enable only the tool sources and operations required for the task.
-- Use direct routes for deliberately selected tools.
-- Keep broader catalogs behind the searchable tool gateway.
-- Review model requests for additional access before approving them.
-- Avoid broad write, process, application, or external-service access until behaviour is understood.
+- Use Direct routing for deliberately selected tools and Gateway for broader discovery.
+- Review requests for additional access before approving them.
+- Grant a specific working folder rather than an entire drive.
+- Avoid broad write, process, application or external-service access until behavior is understood.
+
+Gateway is not the same as Disabled, and Direct does not grant file permission. See [Workspaces and tools](docs/workspaces-and-tools.md#understand-tool-availability-and-routing).
 
 ## MCP servers and plugins
 

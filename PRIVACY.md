@@ -37,9 +37,9 @@ External services have their own privacy policies, retention rules, regional pro
 
 ## Model profiles and routing
 
-Different capabilities may use different profiles or providers. The main assistant model, supporting reasoning, search, embeddings, image generation, realtime interaction, speech output, and transcription may therefore send data to different services.
+Different capabilities may use different profiles or providers. Chat, Utility, embeddings, image generation, realtime interaction, speech output and transcription may therefore send data to different services. Brave web grounding is configured separately and can receive search queries; retrieved content may also be included in model requests.
 
-Review every configured profile, not only the main assistant model. A Room or Workspace override can also change which provider receives future requests.
+Review every configured profile and integration, not only the main assistant model. A Room or Workspace override can also change which provider receives future requests. See [Model setup](docs/model-setup.md) and [Local models](docs/local-models.md) for example configurations.
 
 ## Tools, MCP servers, and plugins
 

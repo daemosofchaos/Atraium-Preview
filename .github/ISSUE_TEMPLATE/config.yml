@@ -1,8 +1,8 @@
 blank_issues_enabled: false
 contact_links:
-  - name: Atraium preview discussions
-    url: https://github.com/daemosofchaos/Atraium-Preview/discussions
-    about: Ask general questions and discuss workflows after Discussions is enabled.
+  - name: Atraium setup and examples
+    url: https://github.com/daemosofchaos/Atraium-Preview/blob/main/docs/README.md
+    about: Installation, model setup, practical examples and troubleshooting.
   - name: Security reports
     url: https://github.com/daemosofchaos/Atraium-Preview/security/advisories/new
     about: Report suspected vulnerabilities privately. Do not disclose vulnerabilities in public issues.

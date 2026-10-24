@@ -1,236 +1,118 @@
-# Getting started with the Atraium preview
+# Get started with Atraium
 
-Atraium connects a compatible model to an assistant identity, selected tools, and persistent places to work. This guide takes you from a verified download to a first low-risk assistant Workspace.
+Install the preview, connect one model, and give your assistant a small task. You do not need to configure every optional feature first.
 
-The current preview supports **Windows desktop** and compatible **Android** devices. Windows is the recommended preview target. Android is an early sideloaded preview for Android 7.0 (API 24) or later.
+**You need:** a Windows x64 computer or supported Android device, plus a model API account or an already running local/self-hosted model server. Atraium does not bundle models or API credits.
 
-## Before you begin
+> For a paid provider, create an API key and set provider-side budgets, quotas and alerts before setup. Consumer chat subscriptions do not necessarily include API access. Read [Billing](TOKEN-USAGE-AND-BILLING.md) and [Privacy](PRIVACY.md) before sending sensitive information.
 
-You need:
+## Install Atraium
 
-- Windows x64, or an Android 7.0+ arm64-v8a device or x86_64 emulator;
-- a compatible local runtime, self-hosted endpoint, or cloud model provider;
-- provider credentials when the selected endpoint requires them;
-- permission to install or run the preview;
-- an understanding that provider and infrastructure usage may incur charges.
+Download a package and its checksum manifest from the [official release](https://github.com/daemosofchaos/Atraium-Preview/releases/tag/v0.4.2-preview.1). The [README download table](README.md#download) explains the choices.
 
-Atraium does not bundle a model, provider account, API key, or token allowance.
+### Verify your download
 
-> **Before using a paid endpoint:** configure provider-side budgets, hard limits, quotas, and alerts. Atraium cannot enforce a provider budget or issue a provider refund. Read [Token usage and provider billing](TOKEN-USAGE-AND-BILLING.md).
+Calculate SHA-256 for the exact file and compare it with the matching filename in `Atraium-0.4.2-preview.1-SHA256SUMS.txt`.
 
-## 1. Download the official release
-
-Open the [Atraium Preview Releases](https://github.com/daemosofchaos/Atraium-Preview/releases) page and select the latest release marked as a **prerelease**.
-
-Choose the package for your device:
-
-- **Windows:** download the installer or portable archive.
-- **Android:** download the APK to sideload. The Android preview bundle contains the identical APK plus preview, privacy, security, and billing documents.
-
-Download the release's SHA-256 checksum manifest too.
-
-## 2. Verify the checksum
-
-Compare the SHA-256 hash of the exact file you downloaded with the matching filename in the release checksum manifest.
-
-On Windows, PowerShell can calculate a hash with:
+For the Windows installer:
 
 ```powershell
 Get-FileHash .\Atraium-0.4.2-preview.1-win-x64-setup.exe -Algorithm SHA256
 ```
 
-For an Android APK, use a SHA-256 tool you trust on the device or computer where it was downloaded.
+For the portable archive:
 
-If the values differ, do not run or install the file. Delete it and download it again from the official release page.
+```powershell
+Get-FileHash .\Atraium-0.4.2-preview.1-win-x64-portable.zip -Algorithm SHA256
+```
 
-## 3. Install Atraium
+For an APK, calculate the hash on a computer or with a trusted device utility. If it differs from the manifest, **do not install or run the file**; download it again from the official release.
+
+A checksum verifies the file against the published manifest. It does not replace checking the download's origin or reviewing operating-system security warnings.
 
 ### Windows installer
 
-Run the installer and follow its prompts.
+Run the verified installer, follow its prompts and open Atraium. This package installs for the current Windows user.
 
-### Windows portable build
+If Windows blocks or warns about a preview package, check its source and checksum. On a managed computer, ask your administrator about application policy rather than disabling system-wide protection.
 
-Extract the archive to a folder you control, then launch Atraium from that folder.
+### Windows portable archive
 
-If Windows displays a reputation warning for an unsigned preview, verify the repository, release URL, and checksum first. Do not disable system-wide security features.
+Use **Extract All** to unpack the entire ZIP into a folder you control, then launch `Atraium.exe` from the extracted folder. Do not run it inside the ZIP or copy only the executable; keep the accompanying files and folders together.
 
-### Android APK
+The portable package avoids an installer. It is not a promise that application data, settings or secure credentials can be moved between computers by copying that folder. Use Atraium's backup/export features for saved work, and expect to re-enter secrets on a new device.
 
-1. Confirm the device runs Android 7.0 (API 24) or later and uses arm64-v8a. x86_64 Android emulators are also supported.
-2. Download the direct APK, or extract the same APK from the Android preview bundle.
-3. Open it from the browser or file manager that downloaded it.
-4. When Android asks, allow **that specific app** to install unknown apps, then complete the normal install prompt.
-5. Review runtime permissions when you invoke their corresponding features. Camera, microphone, foreground location, and calendar access are requested on demand.
+### Android
 
-Use the Windows preview for the broadest desktop-tool coverage.
+The preview supports **Android 7.0 (API 24) or later**, with arm64-v8a devices and x86_64 emulators.
 
-## 4. Protect the provider account
+Open the verified APK in your browser or file manager. If Android requests permission to install unknown apps, grant it only to that app, complete installation and turn it off again when no longer needed. On older Android versions with a device-wide setting, restore that setting afterward.
 
-Before adding credentials:
+The Android ZIP contains the same APK plus reference documents; it is not a separate application. Camera, microphone, foreground location and calendar permissions are requested when their features are used. Windows has broader desktop-tool coverage.
 
-1. review the provider's pricing for every model and capability you plan to use;
-2. create a separate project or API key for Atraium where supported;
-3. set provider-side budgets, hard limits, quotas, and alerts;
-4. open the provider usage dashboard so you can monitor the first workflows.
+## Connect one text model
 
-Provider-side controls and billing records are authoritative.
+Use the first-run **Model providers** step, or open **Setup & settings → Model providers**.
 
-## 5. Create the first model profile
+1. Add a profile with **Text generation** as its purpose.
+2. Enter the provider, base endpoint, model ID and required API key. For an OpenAI-compatible service, choose its supported API mode.
+3. Use **Test connection** and save the profile.
+4. In **Chat and utility**, assign it to both **Chat** and **Utility**.
+5. Leave optional memory, images, web grounding, realtime and speech unconfigured if you do not need them, then finish setup.
 
-A **model profile** is a reusable connection to a model. It stores the provider, endpoint, API mode, model or deployment, credentials, token limits, and related settings.
+Both Chat and Utility need a ready profile; **they can share the same one**. Outside the wizard, capability assignments are available in **Setup & settings → Advanced settings → LLM settings**.
 
-Open **Setup & Settings**, choose **Model providers**, or continue through first-run setup:
+| Your model service | Provider choice | Base endpoint | API mode |
+|---|---|---|---|
+| OpenAI | OpenAI compatible | `https://api.openai.com/v1` | Responses API |
+| Anthropic Claude | Anthropic Claude | `https://api.anthropic.com` | Native API |
+| Google Gemini | Google Gemini | `https://generativelanguage.googleapis.com` | Native API |
+| Azure OpenAI | OpenAI compatible | `https://YOUR-RESOURCE.openai.azure.com/openai/v1` | Deployment's supported tool-calling route |
+| LM Studio on this PC | OpenAI compatible | `http://localhost:1234/v1` | Chat Completions API |
+| Ollama on this PC | OpenAI compatible | `http://localhost:11434/v1` | Chat Completions API |
 
-1. create a model profile;
-2. select the provider and API mode;
-3. enter the endpoint, model identifier, deployment, and credentials where required;
-4. assign it as the main assistant model;
-5. run **Test connection**;
-6. save the profile after the test succeeds.
+Copy the **exact API model ID** from the provider or running server. For Azure, also enter the actual deployment name and choose a route that supports tools for that model. Local models must already be installed and served by their own software. For GPT-6 Astra/Sol, Claude 5.5 and KAT-Coder examples, see the setup guides below.
 
-The current preview labels the main assistant route **Chat** in provider settings. This is the model that receives your messages, uses available tools, and produces the assistant response.
+[Hosted and custom model recipes](docs/model-setup.md) · [LM Studio and Ollama recipes](docs/local-models.md)
 
-A successful connection test confirms that a small request worked. It does not guarantee streaming, high-context, reasoning, or tool-calling compatibility. Test those behaviours with low-risk work.
+Connection tests can make a small billable request. A passing test does not prove that the model handles every tool, input size or media capability.
 
-### Local and self-hosted models
+## Create your assistant and try a task
 
-Atraium connects to the API exposed by your serving stack. For a compatible local or self-hosted model:
+Create a **Room** with a name such as *Project assistant*. Choose your text profile and keep the instructions short:
 
-1. start the model in the serving software of your choice;
-2. note its OpenAI-compatible endpoint and model identifier;
-3. create an **OpenAI-compatible** profile in Atraium;
-4. choose **Chat Completions** when that is the route exposed by the server;
-5. test the profile before enabling local tools.
+```text
+Help me complete the work I delegate, not just plan it. Make reasonable decisions
+within the scope, state important assumptions and check results. Keep agreements
+in notes and project actions in tasks. Ask before spending money, publishing,
+sending external messages or changing anything outside the agreed access.
+```
 
-Compatibility depends on the model, quantization, serving software, chat template, context size, streaming implementation, and tool-call support.
+Use the Room's **Main workspace** and send:
 
-### Models that require the system message first
+```text
+Help me plan a four-week website refresh for a small consulting firm, with one
+available developer. Save a short project brief as a workspace note and create
+three next-step tasks. Identify assumptions; do not browse or edit files.
+```
 
-The default **Chat Completions context caching** mode keeps the root system prompt stable and sends current-turn context separately, improving prompt-cache reuse for compatible providers.
+Review the response, then open **Notes** and **Tasks**. These are shared project records: you can edit them, and the assistant can update them when asked. If it describes a note but does not save one, check that Workspace tools are available and that the model supports tool calling.
 
-If a model or server accepts a system-role message only in the first position, open the profile's **Chat Completions context caching** panel and enable **Update system message with current-turn context**. This places dynamic context in the single root system message. It may reduce prompt-cache hits.
+This small task checks that the model and tools are connected; it is not the limit of the assistant's role. Next, delegate a [complete application](docs/use-cases.md#build-a-complete-application-from-a-brief), [project costing](docs/use-cases.md#produce-a-complete-project-costing) or [launch package](docs/use-cases.md#prepare-a-complete-launch-package). The [independent-assistant guide](docs/independent-assistants.md) explains suitable models, access and completion criteria.
 
-## 6. Turn the model into an assistant
+## Add only what your next task needs
 
-Create a **Room**. A Room is the persistent home for one assistant.
+| Want to… | Add… |
+|---|---|
+| Build an application | A capable coding/tool model, an approved writable project folder, file/command tools and the required SDKs. |
+| Produce a complete costing | Scope, quantities, rates/quotes, spreadsheet/PDF tools and an output folder. |
+| Research current information | A **Brave Search API key** in Web grounding; this is separate from model profiles. |
+| Work with local files | Access to the specific working folder and the relevant tools. |
+| Create images | A separate image-capable profile assigned to Image generation. |
+| Use voice | Suitable speech/transcription or realtime profiles and device permissions. |
+| Create styled PDFs on Windows | Installed Edge or Chrome, plus the PDF tools. |
+| Connect an external integration | A compatible, trusted MCP server and narrowly selected tools. |
 
-Configure:
+[Workspaces and access](docs/workspaces-and-tools.md) · [Images and voice](docs/images-and-voice.md) · [Documents and exports](docs/documents-and-exports.md)
 
-- a clear Room name;
-- the assistant's name and identity;
-- a concise personality or a complete system prompt;
-- boundaries and preferred working style;
-- the default model profile;
-- the baseline tool policy.
-
-Example assistant instruction:
-
-> You are a practical research colleague. Prefer current primary sources, state uncertainty clearly, keep notes about unresolved questions, and turn findings into concrete next steps.
-
-The Room defines **who the assistant is**, not merely the topic of one conversation.
-
-## 7. Give the assistant a Workspace
-
-Create a **Workspace** inside the Room. A Workspace is a project desk for a distinct piece of work.
-
-A Workspace can contain:
-
-- its own project instructions or the inherited Room identity;
-- a model-profile override;
-- a project-specific tool policy;
-- conversation history;
-- editable tasks and notes;
-- attachments and source material;
-- generated artifacts and results.
-
-Start with one focused Workspace, such as:
-
-- research a topic and preserve the sources;
-- inspect a small code project and explain its structure;
-- turn a set of notes into a finished document;
-- compare two configured models against the same task.
-
-## 8. Choose the tools
-
-Atraium includes **200+ built-in tool operations** across supported platforms and integrations. Do not expose all of them simply because they exist.
-
-For the first Workspace:
-
-1. open its tool and access settings;
-2. enable only the sources required for the job;
-3. disable individual operations that are unnecessary or too broad;
-4. place frequently required tools on the direct route where appropriate;
-5. leave broader catalogs behind the searchable tool gateway;
-6. review consequential file, process, application, and external-service operations.
-
-Room policy establishes a baseline. Workspace policy can refine it for one project.
-
-## 9. Use tasks and notes as shared working memory
-
-Tasks and notes are not hidden model memory. They are editable project records shared between you and the assistant.
-
-- Add tasks that define what remains to be done.
-- Let the assistant update task status while working.
-- Record decisions, findings, and handoff context in notes.
-- Edit or add entries yourself whenever needed.
-- Keep important output as Workspace artifacts or files.
-
-This gives the assistant a durable view of the project without relying only on a long conversation.
-
-## 10. Add specialist capabilities when needed
-
-The current provider settings expose several capability routes. Configure only those useful to your work:
-
-- **Utility** for supporting or routine model work;
-- **Search / Grounding** for current, source-backed research;
-- **Embeddings** for compatible memory and semantic workflows;
-- **Image generation** for image creation or editing;
-- **Realtime** for compatible live sessions;
-- **Text-to-speech** for spoken output;
-- **Speech-to-text** for transcription or voice input.
-
-Each route may use a different model profile and provider. Confirm compatibility and pricing for each one.
-
-## 11. Switch models without rebuilding the assistant
-
-Save multiple model profiles when you want to compare models or change capabilities.
-
-You can choose a profile as the global default, override it for a Room, or override it for a Workspace. The assistant identity, instructions, tools, tasks, notes, files, and project structure remain in place.
-
-Changing the main model starts a fresh provider conversation so incompatible provider state is not mixed. This is useful for bench testing or moving a project to a model with different cost, speed, privacy, context, reasoning, or tool-calling characteristics.
-
-## 12. Extend with MCP when useful
-
-Atraium can load tools from compatible Model Context Protocol servers:
-
-- hosted HTTP/SSE servers;
-- local desktop stdio servers.
-
-Treat an MCP server as executable integration code. Review its publisher, configuration, permissions, network destinations, and tool descriptions before connecting it. Make its tools available only to the Rooms and Workspaces that need them.
-
-## A sensible first workflow
-
-1. Use a low-cost or local model profile.
-2. Create one narrowly defined assistant Room.
-3. Create one temporary Workspace.
-4. Enable only search or file-read tools needed for the task.
-5. Add two or three explicit tasks.
-6. Ask the assistant to complete one task and record its findings in a note.
-7. Review the response, tool activity, task changes, notes, provider usage, and generated files.
-8. Expand access only after the behaviour is understood.
-
-## Reporting a problem
-
-Use a [GitHub issue](https://github.com/daemosofchaos/Atraium-Preview/issues) and include:
-
-- Atraium preview version;
-- Windows version or Android device and Android version;
-- installer, portable archive, direct APK, or Android bundle;
-- provider category and API mode, without credentials;
-- affected model profile, Room, Workspace, tool source, or specialist capability;
-- minimal steps to reproduce;
-- expected and actual results;
-- exact visible error text.
-
-Remove secrets and sensitive material before posting. See [Support](SUPPORT.md), [Privacy](PRIVACY.md), and [Security](SECURITY.md).
+If Chat is unavailable, a local connection fails, or a tool is missing, start with [Troubleshooting](docs/troubleshooting.md). Do not reset application data or delete saved projects as a first repair step.

@@ -1,148 +1,71 @@
 # Token usage and provider billing
 
-> **Atraium is a bring-your-own-model application. You are responsible for usage and charges created through the provider accounts, API keys, endpoints, MCP servers, plugins, and other services you configure.**
+> **You are responsible for charges created through the accounts, API keys, endpoints, MCP servers, plugins and other services you configure in Atraium.**
 
-Atraium does not include model credits or token allowance. It does not resell model access, collect provider payments, control provider pricing, or receive a portion of your provider bill.
+Atraium is a bring-your-own-model application. It does not include model credits or token allowance, resell model access, collect provider payments or receive a portion of your provider bill. Providers set their own prices, limits and terms.
 
-When Atraium sends a request using credentials or endpoints you supplied, the relevant provider may charge your account according to its own prices, billing units, limits, and terms.
+## Set limits before adding a key
 
-## Why one assistant can use several billable services
+Use a separate provider project or API key for Atraium where supported. Configure provider-side budgets, quotas, hard limits and alerts, then monitor the provider dashboard during your first tasks.
 
-Atraium allows different model profiles to handle different kinds of work. A Room or Workspace may therefore use separate profiles for:
+A spending alert may be delayed and is not necessarily a hard limit. Atraium's usage view is not a hard spending control. Do not leave expensive or repeated requests unattended.
 
-- the main assistant conversation;
-- supporting or utility reasoning;
-- search and grounding;
-- embeddings and memory;
-- image generation and editing;
-- realtime interaction;
-- text-to-speech;
-- speech-to-text and transcription.
+Consumer ChatGPT, Claude or Gemini subscriptions do not necessarily include API credits. Check API billing independently before connecting the account.
 
-Tools, MCP servers, and plugins may call additional services too. Review every configured profile and integration, not only the main assistant model.
+## What can create charges?
 
-## What may create charges
+| Activity | Possible charges |
+|---|---|
+| Chat and Utility | Input/output tokens, reasoning, retained context and cache usage. |
+| Research | Model requests, search queries, grounding/retrieval or hosted service charges. |
+| Memory | Embeddings and semantic processing. |
+| Images | Generated outputs, edits, resolution/quality or provider-specific units. |
+| Speech and realtime | Audio duration, transcription, generated speech and active sessions. |
+| Tools and integrations | Follow-up model calls and any paid MCP/plugin/external services. |
+| Self-hosting | Compute rental, electricity, hardware, storage and bandwidth. |
 
-Depending on the provider and configuration, billable activity may include:
+Pricing and metering differ between services and can change. Failed, interrupted, retried or unsatisfactory requests may still be billable.
 
-- input and output tokens;
-- reasoning or completion tokens;
-- cached-input, cache-read, or cache-write usage;
-- assistant and Workspace system instructions;
-- long conversation context;
-- follow-up model calls during multi-step tool workflows;
-- search, grounding, retrieval, or hosted tool calls;
-- embeddings and semantic-memory operations;
-- image generation and image editing;
-- audio, speech, transcription, and realtime sessions;
-- requests made by configured MCP servers or plugins;
-- retries, revisions, verification passes, and repeated attempts;
-- provider-specific features with separate prices.
+A local tool does not necessarily have its own provider charge. However, the model can consume tokens to select it, read the result and continue. A short prompt can therefore create several requests, especially during research, document creation, large-file analysis or coding tasks.
 
-A local tool does not necessarily create a separate provider charge by itself. However, the model calls used to select the tool, interpret its output, continue the workflow, and produce a final result may consume additional tokens.
+## One assistant can use several services
 
-## Why a short prompt can cost more than expected
+Review all capability assignments, not only Chat. Utility, embeddings, images, speech and realtime may use different profiles. Brave web grounding is a separate service with its own key, quota and pricing. MCP servers and plugins can add other services.
 
-The assistant may need several steps to finish one request:
+For example, a local Chat model can still produce remote charges if Utility, search or image generation uses a hosted service. A Room or Workspace model override can also change where later requests are billed.
 
-1. interpret the goal;
-2. select or search for a tool;
-3. call the tool;
-4. read the result;
-5. update tasks or notes;
-6. call another tool or model route;
-7. verify the work;
-8. produce the final response.
+## Use cost-appropriate settings
 
-The visible length of your original prompt is therefore not a reliable estimate of total usage.
+- Start with small tasks and modest input sizes.
+- Use a suitable lower-cost or local model for routine work where it is reliable.
+- Request one image or a focused revision rather than unneeded variations.
+- Keep instructions and conversation context relevant to the project.
+- Enable only required tools and optional capabilities.
+- Monitor long research, coding and voice sessions; stop repeated failures.
+- Check every configured service's price, access and quota.
+- Revoke or rotate a key immediately if it may have been exposed.
 
-Usage can rise quickly during:
+These choices can reduce unnecessary usage. They do not replace provider-side limits or guarantee a particular cost.
 
-- deep or iterative research;
-- large repository analysis;
-- long conversations with substantial retained context;
-- autonomous or multi-step coding loops;
-- repeated build, diagnose, edit, and retry cycles;
-- document, workbook, and presentation generation;
-- repeated image generation or editing;
-- large file or web-page processing;
-- realtime and voice sessions;
-- workflows left running without supervision.
+## Usage records are not an invoice
 
-## Model switching and usage
+Atraium can show usage reported by supported providers. Those records help you understand activity, but may be incomplete, delayed or omit separately billed features and integrations.
 
-Switching the main model profile starts a fresh provider conversation so incompatible provider state is not mixed. The Room and Workspace structure remains, but later requests can still include the instructions, files, notes, task context, or other information needed for the work.
+**Provider-side billing records are authoritative.** Atraium cannot reverse, credit or refund provider charges, enforce a provider budget, or control pricing and billing delays. Contact the provider about account access, quota, refunds or disputed charges.
 
-Bench testing several profiles can create usage across several providers or accounts. Compare provider dashboards and time ranges when evaluating cost.
+When comparing profiles, compare the same task and time range across all provider dashboards involved. Switching the main model starts a fresh provider conversation, but later requests can still include relevant instructions, files, notes and task context.
 
-## Atraium usage records are not the provider bill
+## Local does not always mean free
 
-Atraium can record usage reported by supported provider routes and present it in usage views. These records are useful for understanding model and Workspace activity, but they are not a provider invoice or hard spending control.
+A local endpoint may have no per-token fee, but hardware, electricity and storage still cost resources. A self-hosted cloud server may continue charging for compute even while Atraium is closed. Stopping chat does not shut down a rented server or reverse charges already incurred.
 
-- Provider-side billing records are authoritative.
-- Some providers report incomplete or delayed usage data.
-- Prices, metering units, and cache rules can change.
-- A local estimate may not include every provider feature or external service.
-- Failed, interrupted, retried, or unsatisfactory requests may still be billable.
-- Atraium cannot reverse, refund, or credit charges made by a provider.
+If content or usage must stay local, review **every** profile and integration. [Local model setup](docs/local-models.md) explains a starting configuration.
 
-Contact the provider about account billing, disputed charges, quotas, or refunds.
+## Unexpected usage
 
-## Recommended safeguards
+Stop the active request when possible, then check the provider's dashboard and request history. If usage appears unauthorized, disable or rotate the key. Record the approximate time, affected profiles and visible activity before retrying with small non-sensitive inputs and strict limits.
 
-Before substantial work:
-
-1. Create a separate provider project, account, or API key for Atraium where supported.
-2. Configure provider-side budgets, hard limits, quotas, and alerts.
-3. Confirm the price of every configured model profile and specialist capability.
-4. Begin with small, focused tasks while learning the model's behaviour.
-5. Use cost-appropriate models for routine or supporting work.
-6. Limit unnecessary history and very large inputs.
-7. Monitor the provider dashboard during long or tool-rich workflows.
-8. Stop workflows that loop, repeatedly fail, or are no longer useful.
-9. Revoke or rotate a key immediately if it is exposed.
-10. Do not leave expensive workflows unattended.
-
-A provider-side hard limit is safer than relying only on an alert, because alerts may be delayed.
-
-## Room and Workspace safeguards
-
-Cost can be managed indirectly through configuration:
-
-- choose an appropriate default model profile;
-- override a Room or Workspace only when a different model is needed;
-- expose only the tools required for the job;
-- keep broad catalogs behind the searchable tool gateway;
-- use focused Workspace instructions and tasks;
-- review tool activity and stop unproductive loops;
-- disable specialist capabilities that are not in use.
-
-These measures reduce unnecessary work but are not substitutes for provider-side spending limits.
-
-## Local and self-hosted models
-
-A local or self-hosted endpoint may not charge per token, but it can still create costs such as:
-
-- rented compute;
-- cloud infrastructure;
-- electricity and hardware usage;
-- storage and bandwidth;
-- third-party hosting fees.
-
-Those costs remain your responsibility.
-
-## Before reporting unexpected usage
-
-If a workflow appears to use more resources than expected:
-
-1. stop the active workflow where possible;
-2. review every provider dashboard and request log involved;
-3. rotate or disable a key if usage appears unauthorized;
-4. record the Atraium version, approximate time range, model profiles, Room, Workspace, and tool activity;
-5. reproduce only with low-risk data and strict provider limits if safe to do so;
-6. remove account identifiers, credentials, prompts, and sensitive content before opening a public issue.
-
-An Atraium issue can help investigate reproducible application behaviour. It cannot resolve a provider billing dispute or issue a refund.
+Use [Support](SUPPORT.md) for reproducible application behavior. Remove credentials, account identifiers and sensitive prompts from any public report. Atraium cannot settle a provider billing dispute.
 
 ## Acceptance of responsibility
 
@@ -154,3 +77,5 @@ By configuring credentials or endpoints and using Atraium, you acknowledge that:
 - Atraium is not responsible for provider pricing, billing delays, disputed charges, overspend, or refund decisions.
 
 If you are not comfortable accepting that responsibility, do not configure paid provider credentials in the preview.
+
+[Getting started](GETTING-STARTED.md) · [Model setup](docs/model-setup.md) · [Privacy](PRIVACY.md) · [Binary preview terms](BINARY-PREVIEW-TERMS.md)

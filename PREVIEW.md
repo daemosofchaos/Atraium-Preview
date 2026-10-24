@@ -1,108 +1,74 @@
-# Preview scope and expectations
+# About the public preview
 
-Atraium is in an early public preview. The purpose is to evaluate whether people can connect their own models, shape them into useful assistants, give them controlled tools and working spaces, and complete meaningful work safely.
+Atraium helps you give an assistant responsibility for practical work: complete applications, project costings, research, launch packages, documents and media. Hosted or local models use the tools you select, with conversations, notes, tasks and results kept in workspaces.
 
-## What the preview is testing
+The current public release is **[0.4.2 Preview 1](https://github.com/daemosofchaos/Atraium-Preview/releases/tag/v0.4.2-preview.1)**. Read its [release notes](release-notes/v0.4.2-preview.1.md) for version-specific changes.
 
-The preview is intended to answer practical questions:
+## Available platforms
 
-1. Can a new user install and launch Atraium?
-2. Can they connect a compatible local, self-hosted, or cloud model?
-3. Is it clear how a model profile becomes a configured assistant?
-4. Do Rooms and Workspaces make sense as persistent places for assistants and projects?
-5. Can users choose appropriate tools and understand their access?
-6. Can an assistant track work through editable tasks, notes, files, and results?
-7. Can model profiles be switched without losing the assistant and project structure?
-8. Which errors or limitations prevent useful work?
+| Platform | Availability |
+|---|---|
+| Windows x64 | Installer and portable archive; recommended preview experience. |
+| Android | Early sideloaded preview for Android 7.0+ arm64-v8a devices and x86_64 emulators. |
+| Web, macOS and iOS | No public package in this release. |
 
-## Product model
+Android requests camera, microphone, foreground location and calendar permissions when their features are invoked. Desktop file, process and application actions are not available on every platform.
 
-The current preview uses four related concepts:
+## What you can use
 
-- A **model profile** is a reusable model connection and configuration.
-- An **assistant** combines a model with an identity, instructions, selected tools, and persistent context.
-- A **Room** is the long-lived home for that assistant, including its base instructions, default model profile, and tool policy.
-- A **Workspace** is a project desk inside the Room, with project instructions, model and tool overrides, conversation, notes, tasks, files, and generated results.
+- Independent project work with a capable model and the required access: implementation, checking, repair and finished deliverables, not only planning or advice.
+- Hosted and compatible local/self-hosted text models, with separate Chat and Utility assignments.
+- Native Anthropic Claude and Google Gemini profiles, and OpenAI-compatible connections.
+- Rooms for assistant roles and workspaces for separate projects.
+- Editable notes, tasks, attachments and generated document artifacts.
+- Built-in tools with Direct or searchable Gateway routing and Room/Workspace access choices.
+- Current web research with a separately configured Brave Search API key.
+- Inline charts and comparisons, documents, spreadsheets, presentations and image generation where configured.
+- Styled HTML-to-PDF reports on Windows with installed Edge or Chrome.
+- Exact conversation-text exports and copies of original artifacts/attachments.
+- Specialized profiles for memory, images, speech, transcription and realtime interaction where supported.
+- Compatible MCP integrations and backup/restore features.
 
-Room instructions can be a concise personality or a complete system prompt. A Workspace can inherit those instructions or use a project-specific operating brief.
+Availability depends on the installed release, device, model, provider, services and granted access. Atraium does not bundle API credits, model-server software or model weights.
 
-## In scope
+[Setup guides](docs/README.md) · [Complete-project examples](docs/use-cases.md) · [Independent assistants](docs/independent-assistants.md)
 
-The current preview focuses on:
+## Preview limitations
 
-- Windows desktop installation and startup;
-- Android sideload installation on Android 7.0 (API 24) or later;
-- reusable model profiles for compatible local, self-hosted, and cloud models;
-- OpenAI-compatible endpoints, Anthropic Claude, and Google Gemini routes where supported;
-- assistant identity, personality, system instructions, and project-specific instructions;
-- Room and Workspace model-profile overrides;
-- Room and Workspace tool policies;
-- more than 200 built-in tool operations across supported platforms and integrations;
-- direct tools and a searchable tool gateway;
-- tasks, notes, attachments, artifacts, and persistent project context;
-- research, coding, document, spreadsheet, presentation, image, and selected desktop workflows;
-- specialist model routes for search, memory, images, realtime interaction, speech, and transcription where configured;
-- compatible MCP server integrations;
-- backup and restore behaviour;
-- clear, reproducible bug reports.
-
-Actual tool and capability availability depends on the platform, enabled services, permissions, model, provider, and policy selected for a Room or Workspace.
-
-## Not promised by this preview
+This is evaluation software, not a guarantee of production readiness or unattended safety. Keep backups and review important output.
 
 The preview does not promise:
 
-- production readiness;
-- compatibility with every provider, OpenAI-style server, model, quantization, chat template, or tool-call format;
-- reliable use of every available tool by every model;
-- stable APIs, storage formats, or configuration schemas between preview versions;
-- a security sandbox around local tools, MCP servers, or extensions;
-- unattended safety for autonomous or consequential workflows;
-- complete cost controls or exact provider-cost estimates;
+- compatibility with every model, OpenAI-style endpoint, quantization or tool-call format;
+- reliable use of every tool by every model;
 - feature parity between Windows and Android;
-- a public web, macOS, or iOS build;
-- service-level guarantees or response times.
+- unchanged settings or storage formats between preview versions;
+- a security sandbox around local actions or external integrations;
+- complete usage reporting, hard spending controls or exact provider-cost estimates;
+- a support service-level agreement or guaranteed response time.
 
-## Supported targets
+A model may connect successfully yet struggle with large requests, tools or specialized media. Begin with a short task and limited access.
 
-| Target | Preview status |
-|---|---|
-| Windows desktop | Most stable and recommended preview target. |
-| Android | Early sideloaded preview for Android 7.0+ arm64-v8a devices and x86_64 emulators. |
-| Web | In development; no public preview. |
-| macOS | In development; no public release. |
-| iOS | In development; no public release. |
+## Your data and accounts
 
-The Android package requests camera, microphone, foreground location, and calendar access only when the corresponding feature is invoked. Review each permission prompt before allowing it.
+Atraium is local-first, not automatically offline. Models and integrations receive the content needed for their requests. A local tool's result can be included in a later remote model request.
 
-## Tool and extension boundaries
+You choose the accounts, endpoints, keys, files and integrations used, and are responsible for:
 
-Atraium is a powerful local application, not a sandbox. A tool may read or modify files, run processes, interact with applications, call remote services, or expose data to a configured provider or extension.
+- provider and infrastructure charges, including search and media services;
+- monitoring provider quotas, limits and usage;
+- deciding which content may be sent to configured services;
+- protecting credentials and maintaining backups;
+- reviewing consequential operations and important results.
 
-Use Room and Workspace policy to grant only the access required for the job. Start with low-risk files and temporary projects. Treat external integrations as executable code and use only those you understand and trust.
+Atraium does not include credits, enforce provider budgets, control prices or issue provider refunds. Read [Billing](TOKEN-USAGE-AND-BILLING.md), [Privacy](PRIVACY.md) and [Security](SECURITY.md) before using real data or paid credentials.
 
-## Data and cost responsibility
+## Downloads and terms
 
-You are responsible for:
+Use only the [official website](https://atraium.com) or this repository's [GitHub Releases](https://github.com/daemosofchaos/Atraium-Preview/releases), and verify the published SHA-256 manifest before installing.
 
-- the provider accounts, endpoints, and credentials you configure;
-- all provider, infrastructure, search, embedding, image, audio, and realtime charges;
-- monitoring usage, quotas, budgets, and alerts in provider dashboards;
-- the prompts, files, tool results, and other content sent to configured services;
-- deciding which models, tools, permissions, MCP servers, and plugins are appropriate;
-- maintaining backups of important data;
-- reviewing consequential operations.
+The [binary preview terms](BINARY-PREVIEW-TERMS.md) permit personal evaluation and feedback. They are not an open-source licence. This repository contains preview downloads and public documentation, not the application source; any future public source release and licence will be announced separately.
 
-Atraium does not include provider credits, enforce provider-side spending limits, control provider pricing, or issue provider refunds. Read [Token usage and provider billing](TOKEN-USAGE-AND-BILLING.md) before using paid credentials.
+## Help
 
-## Source availability
-
-This repository contains public preview documentation and downloadable binary assets. It does not contain the Atraium application source code.
-
-Any future public source release and its licence will be announced separately.
-
-## Support level
-
-Support is best-effort. A useful report can improve a future preview, but filing an issue does not create a support contract or guarantee a fix.
-
-See [Getting started](GETTING-STARTED.md), [Support](SUPPORT.md), [Privacy](PRIVACY.md), and [Security](SECURITY.md).
+Start with [Getting started](GETTING-STARTED.md) and [Troubleshooting](docs/troubleshooting.md). For reproducible problems or focused suggestions, follow [Support](SUPPORT.md). Never publish API keys, private endpoints, confidential prompts or sensitive files in an issue.

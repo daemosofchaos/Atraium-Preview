@@ -16,7 +16,7 @@ body:
     id: version
     attributes:
       label: Atraium preview version
-      placeholder: 0.1.0-preview.1
+      placeholder: 0.4.2-preview.1
     validations:
       required: true
 
@@ -33,6 +33,10 @@ body:
         - Spreadsheets
         - Presentations
         - Image generation or editing
+        - Voice or transcription
+        - Workspaces, notes and tasks
+        - Inline visuals
+        - Saving messages or files
         - Local desktop workflow
         - Plugins or MCP
         - Other
@@ -56,7 +60,7 @@ body:
   - type: textarea
     id: friction
     attributes:
-      label: What created friction or stopped you?
+      label: What was difficult or stopped you?
     validations:
       required: true
 

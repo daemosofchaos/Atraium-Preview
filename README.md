@@ -1,168 +1,123 @@
 # Atraium Preview
 
-![Atraium hero](docs/assets/atraium-hero.svg)
+![Atraium — assistants with tools and persistent workspaces](docs/assets/atraium-hero.svg)
 
-> **Turn your model into an assistant. Give it a role, selected tools, persistent working spaces, and somewhere to keep the work.**
+**Bring your own model. Give an assistant a project—not just a question.**
 
-## Official website and downloads
+Atraium gives an assistant the tools and working environment to act as an **independent worker**. Give it a brief to build an application, produce a complete project costing or prepare a research-backed launch package. With a capable model and the right access, it can make routine decisions, create files, check results, repair problems and deliver the finished work—not just describe what you should do next.
 
-[**atraium.com**](https://atraium.com) is the official Atraium website. Trusted preview downloads are published through this repository and its GitHub Releases page.
+Hosted and local models connect to coding, research and document tools, with conversations, notes, tasks and deliverables kept in project workspaces. You choose the model, the responsibility and the access.
 
-The current Windows and Android preview is **[Atraium 0.4.2 Preview 1](https://github.com/daemosofchaos/Atraium-Preview/releases/tag/v0.4.2-preview.1)**.
+[Download](#download) · [Get started](GETTING-STARTED.md) · [Delegate a complete project](docs/independent-assistants.md) · [Connect a model](docs/model-setup.md) · [Documentation](docs/README.md) · [Official website](https://atraium.com)
 
-| Download | Purpose |
+## What would you delegate?
+
+**A working application:** “Build an internal service-desk app with staff login, ticket management, a dashboard and tests. Create the project in the approved folder, build it, fix failures and include setup documentation.” [Complete application example](docs/use-cases.md#build-a-complete-application-from-a-brief).
+
+**A complete project costing:** “Use these scope documents, quantities, labour rates and supplier prices to produce an auditable workbook, risk scenarios and a client-facing PDF. Reconcile the totals and flag missing information.” [Costing example and sample inputs](docs/use-cases.md#produce-a-complete-project-costing).
+
+**A launch package:** “Turn this product brief into a sourced market assessment, positioning, a presentation and a launch plan. Retain editable deliverables and record the decisions.” [Launch package example](docs/use-cases.md#prepare-a-complete-launch-package).
+
+Pair the work with a suitable model: **GPT-6 Astra**, **GPT-6.1 Sol**, **Claude Opus/Sonnet 5.5**, or a locally hostable coding model such as **KAT-Coder-V2.5-Dev**. These are options, not a promise of identical results; API mode, tool support, context and permissions matter. [Model choices and independent work](docs/independent-assistants.md#choose-a-model-for-the-responsibility).
+
+## Why choose Atraium?
+
+Atraium brings **model choice, reusable assistant roles, visible project records and coding/business tools into one app**. A software project can have its implementation, costing, research and client handover in separate workspaces, with different instructions and models where useful.
+
+Codex and Claude Code also perform autonomous work. Choose Atraium when you want this integrated, multi-provider workspace experience across software and business deliverables—not because autonomy belongs to only one product. [How Atraium fits](docs/independent-assistants.md#why-choose-atraium-for-this-work).
+
+## Download
+
+The latest public release is **[0.4.2 Preview 1](https://github.com/daemosofchaos/Atraium-Preview/releases/tag/v0.4.2-preview.1)**. Windows is the recommended preview experience; Android is an early sideloaded preview.
+
+| Package | Choose this when… |
 |---|---|
-| [Windows x64 installer (.exe)](https://github.com/daemosofchaos/Atraium-Preview/releases/download/v0.4.2-preview.1/Atraium-0.4.2-preview.1-win-x64-setup.exe) | Install Atraium for the current Windows user. |
-| [Portable Windows x64 archive (.zip)](https://github.com/daemosofchaos/Atraium-Preview/releases/download/v0.4.2-preview.1/Atraium-0.4.2-preview.1-win-x64-portable.zip) | Extract and run Atraium without an installer. |
-| [Android APK](https://github.com/daemosofchaos/Atraium-Preview/releases/download/v0.4.2-preview.1/Atraium-0.4.2-preview.1-android.apk) | Sideload on Android 7.0+ devices with arm64-v8a or x86_64 support. |
-| [Android preview bundle (.zip)](https://github.com/daemosofchaos/Atraium-Preview/releases/download/v0.4.2-preview.1/Atraium-0.4.2-preview.1-android-preview.zip) | Get the same APK together with preview, privacy, security, and billing documents. |
-| [SHA-256 checksums](https://github.com/daemosofchaos/Atraium-Preview/releases/download/v0.4.2-preview.1/Atraium-0.4.2-preview.1-SHA256SUMS.txt) | Verify the exact installer, archive, or APK before running it. |
-| [All preview releases](https://github.com/daemosofchaos/Atraium-Preview/releases) | Browse release history and future downloads. |
+| [Windows x64 installer](https://github.com/daemosofchaos/Atraium-Preview/releases/download/v0.4.2-preview.1/Atraium-0.4.2-preview.1-win-x64-setup.exe) | You want a normal installation for your Windows account. |
+| [Windows x64 portable ZIP](https://github.com/daemosofchaos/Atraium-Preview/releases/download/v0.4.2-preview.1/Atraium-0.4.2-preview.1-win-x64-portable.zip) | You want to extract the application and run it without an installer. |
+| [Android APK](https://github.com/daemosofchaos/Atraium-Preview/releases/download/v0.4.2-preview.1/Atraium-0.4.2-preview.1-android.apk) | You want to sideload on an Android 7.0+ arm64-v8a device or x86_64 emulator. |
+| [Android preview ZIP](https://github.com/daemosofchaos/Atraium-Preview/releases/download/v0.4.2-preview.1/Atraium-0.4.2-preview.1-android-preview.zip) | You want the same APK with the preview, privacy, security and billing documents. |
+| [SHA-256 checksums](https://github.com/daemosofchaos/Atraium-Preview/releases/download/v0.4.2-preview.1/Atraium-0.4.2-preview.1-SHA256SUMS.txt) | Verify the package before installing or running it. |
 
-Read [Getting started](GETTING-STARTED.md) before connecting a provider. See the [0.4.2 Preview 1 release notes](release-notes/v0.4.2-preview.1.md) for version-specific details.
+[All releases](https://github.com/daemosofchaos/Atraium-Preview/releases) · [What's new in 0.4.2](release-notes/v0.4.2-preview.1.md) · [Installation instructions](GETTING-STARTED.md#install-atraium)
 
-> **Provider costs:** Atraium uses the accounts, endpoints, and credentials you configure. You are responsible for the resulting provider and infrastructure charges. Set provider-side limits and read [Token usage and provider billing](TOKEN-USAGE-AND-BILLING.md) before using paid services.
+> **Bring-your-own-model means bring-your-own account or server.** Atraium does not include model downloads, API keys or credits. A ChatGPT, Claude or Gemini consumer subscription is not necessarily an API account. You are responsible for provider and infrastructure charges; set provider-side spending limits before adding a paid key. See [Billing](TOKEN-USAGE-AND-BILLING.md).
 
-## Atraium in one minute
+## Your first assistant
 
-Atraium is a multi-platform, bring-your-own-model workspace. It connects to compatible local runtimes, self-hosted endpoints, and cloud providers, then adds the structure a model needs to become a useful assistant or colleague.
+1. Install Atraium and create a model profile in first-run setup.
+2. Assign that profile to **Chat** and **Utility**. One text model can serve both; images, voice and web grounding can wait.
+3. Create a Room for your assistant and use its Main workspace for your first task.
+4. Try this request:
 
-Atraium does not replace the software that serves your model. It complements model runners, provider APIs, coding agents, and chat interfaces by adding:
+```text
+Help me plan a four-week website refresh for a small consulting firm, with one
+available developer. Save a short project brief as a workspace note and create
+three next-step tasks. Identify assumptions; do not browse or edit files.
+```
 
-- a persistent assistant identity and operating instructions;
-- controlled access to tools;
-- project working spaces;
-- editable tasks and notes;
-- files, sources, artifacts, and generated results;
-- reusable model configurations;
-- specialist routes for images, speech, transcription, realtime interaction, memory, and reasoning where supported.
+Open **Notes** and **Tasks** to review the saved work. This is a quick setup check, not the limit of what you can delegate. Follow the [quick start](GETTING-STARTED.md) for installation and connection details, then try an [end-to-end project](docs/use-cases.md).
+
+## Choose your model setup
+
+| What you have | Start here |
+|---|---|
+| OpenAI API account | [OpenAI setup](docs/model-setup.md#openai) |
+| Anthropic API account | [Claude setup](docs/model-setup.md#anthropic-claude) |
+| Google AI Studio API key | [Gemini setup](docs/model-setup.md#google-gemini) |
+| Azure OpenAI deployment | [Azure setup](docs/model-setup.md#azure-openai) |
+| A PC that can run local models | [LM Studio or Ollama](docs/local-models.md) |
+| An OpenAI-compatible hosted or self-hosted endpoint | [Custom endpoint setup](docs/model-setup.md#other-openai-compatible-services) |
+| Android with a model server on another computer | [Connect your phone to a server](docs/local-models.md#use-a-server-from-android-or-another-computer) |
+
+You can save several profiles and choose a different model for a Room or Workspace. Provider, model and tool-calling compatibility varies; start with a small task before granting file or application access.
+
+## What can you do with Atraium?
+
+| Use case | Useful result |
+|---|---|
+| [Build a complete application](docs/use-cases.md#build-a-complete-application-from-a-brief) | A working project, build/test evidence, setup instructions and a handover. |
+| [Cost a complete project](docs/use-cases.md#produce-a-complete-project-costing) | An auditable workbook, budget comparison, risk scenarios and a client PDF. |
+| [Prepare a launch package](docs/use-cases.md#prepare-a-complete-launch-package) | A sourced assessment, positioning, presentation and actionable launch plan. |
+| [Research a purchase](docs/use-cases.md#compare-products-with-current-sources) | A sourced comparison, clear limitations and a saved recommendation. |
+| [Plan a project](docs/use-cases.md#turn-meeting-notes-into-a-project-plan) | An editable brief, decisions and next-step tasks. |
+| [Understand a CSV](docs/use-cases.md#explore-a-csv-and-create-a-chart) | Checked totals, an inline chart and reusable data. |
+| [Create a client report](docs/use-cases.md#create-a-client-ready-pdf) | A styled PDF and retained HTML source for revisions. |
+| [Review a code project](docs/use-cases.md#review-a-small-code-project) | Findings tied to files, followed by changes only when requested. |
+| [Prepare a handover](docs/use-cases.md#save-a-handover-without-regenerating-it) | Exact saved message text and original document/image files. |
+| [Create campaign artwork](docs/use-cases.md#generate-one-campaign-image) | A requested image using a separately configured image model. |
 
 ![Atraium preview on Windows](docs/assets/atraium_preview_1.png)
 
-## The four ideas to know
+## Keep work organized
 
-| Concept | Plain-English meaning |
-|---|---|
-| **Model profile** | A reusable connection to a model: provider, endpoint, credentials, API mode, model, limits, and related settings. |
-| **Assistant** | A model profile combined with an identity, instructions, tools, and persistent work context. |
-| **Room** | The long-lived home for one configured assistant. It holds the assistant identity, base system instructions, default model profile, and tool policy. |
-| **Workspace** | A project desk inside a Room. It can inherit the assistant identity or use project-specific instructions, models, tools, conversations, notes, tasks, files, and results. |
+- **Model profile:** a reusable provider connection, model and settings.
+- **Room:** the home for an assistant's role, instructions and default model/tools.
+- **Workspace:** one project inside a Room, with its own conversation, notes, tasks and artifacts.
 
-A Room answers **who the assistant is**. A Workspace answers **what it is working on**.
+For example, a Business Room can have separate workspaces for a website refresh, supplier research and monthly reporting. Saved notes and tasks keep the important work easy to find; you can edit them yourself.
 
-## Shape the assistant for the job
+[Rooms, workspaces and tools](docs/workspaces-and-tools.md) explains templates, model overrides and access controls.
 
-A Room can contain a concise personality or a complete system prompt. A Workspace can inherit that identity or provide a complete project-specific operating brief.
+## Add capabilities when you need them
 
-This makes it possible to create assistants such as:
+Chat and Utility are enough to start. Add **Brave Search** for current web research, an image model for artwork, or specialized profiles for memory, speech and realtime interaction. Those services have their own account, access and cost requirements.
 
-- a research colleague that prefers primary sources and records open questions;
-- a coding partner that can inspect a repository, edit files, run commands, and verify changes;
-- a document specialist that turns notes and source material into finished files;
-- an image or media assistant backed by suitable specialist model profiles;
-- an operations assistant with deliberately limited access to local tools.
+Built-in tools cover documents, files, research, code and supported device actions. Broader tool catalogs are available through a searchable **Gateway**; selected tools can be **Direct**. Neither route grants file permission. Compatible MCP servers can add tools, but should be treated as trusted integrations with real access—not as harmless prompts.
 
-The instructions, tools, notes, tasks, and project structure remain with the Room and Workspace instead of being tied to one disposable conversation.
+[Model setup](docs/model-setup.md) · [Images and voice](docs/images-and-voice.md) · [Documents and exports](docs/documents-and-exports.md)
 
-## More than 200 built-in tool operations
+## Preview and safety
 
-Atraium includes **200+ built-in tool operations** across its supported platforms and integrations. Availability depends on the platform, permissions, enabled services, and the policy you choose for a Room or Workspace.
+- Windows x64 and Android packages are available. There are no public Web, macOS or iOS packages in this release.
+- Preview software is not a production guarantee. Keep backups and review important output.
+- Atraium is local-first, not automatically offline. Configured services receive the content needed for their requests.
+- Local tools can affect real files and applications. Begin with limited access and non-sensitive data.
+- Download only from the official website or this repository's Releases page, and verify the checksum.
 
-The built-in catalog covers areas such as:
+[Preview scope](PREVIEW.md) · [Privacy](PRIVACY.md) · [Security](SECURITY.md) · [Billing](TOKEN-USAGE-AND-BILLING.md) · [Binary preview terms](BINARY-PREVIEW-TERMS.md)
 
-- web search, page retrieval, and source-backed research;
-- file discovery, reading, writing, exact edits, and structured patches;
-- source-code search, command execution, builds, diagnostics, and supported Visual Studio workflows;
-- Word documents, PDFs, spreadsheets, presentations, and text processing;
-- images, local applications, processes, and selected desktop workflows;
-- Workspace notes, tasks, attachments, and generated artifacts.
+## Help and feedback
 
-You do not need to expose the whole catalog to every model. Enable or disable tool sources and individual operations at Room or Workspace level. Frequently needed tools can be placed directly in front of the model; broader catalogs can remain behind Atraium's searchable tool gateway.
+Check [Troubleshooting](docs/troubleshooting.md) for connection, installation and tool problems. For a reproducible bug or focused suggestion, use [GitHub Issues](https://github.com/daemosofchaos/Atraium-Preview/issues) and follow the [support guide](SUPPORT.md). Remove credentials and private content from reports.
 
-## Keep track of real work
-
-Each Workspace gives the assistant durable project context:
-
-- **Tasks** track planned, active, and completed work. You can add and edit them too.
-- **Notes** preserve decisions, research, instructions, and handoff context.
-- **Files and attachments** keep source material with the project.
-- **Artifacts** collect generated documents and other finished results.
-
-The assistant can update these records while it works, and you remain able to review and change them.
-
-## Switch the model without rebuilding the assistant
-
-Model profiles are reusable. Choose a default profile, override it for a Room, or use a different profile for one Workspace.
-
-This is useful for:
-
-- comparing local or hosted models against the same job;
-- moving between faster and more capable models;
-- changing privacy, cost, context, reasoning, or tool-calling characteristics;
-- giving a particular project a model that better fits its workload.
-
-When the main model profile changes, Atraium starts a fresh provider conversation so incompatible provider state is not mixed. The assistant identity, instructions, tools, notes, tasks, files, and Workspace structure remain in place.
-
-## Add specialist model capabilities
-
-A single model does not need to do everything. Compatible profiles can be assigned to different kinds of work, including:
-
-- the main assistant conversation;
-- supporting or utility reasoning;
-- search and grounding;
-- embeddings and memory;
-- image generation and editing;
-- realtime interaction;
-- text-to-speech;
-- speech-to-text and transcription.
-
-The assistant can use a specialist capability only after an appropriate profile has been configured and made available.
-
-## Extend the tool catalog
-
-Atraium can load tools from **Model Context Protocol (MCP)** servers alongside its built-in catalog. Hosted HTTP/SSE servers and local desktop stdio servers are supported where the platform and server allow them.
-
-Room and Workspace tool policy applies to extension tools as well as built-in tools.
-
-## Connect local, self-hosted, or cloud models
-
-Atraium supports compatible provider routes rather than requiring one model vendor.
-
-- Use a local or self-hosted model through a compatible OpenAI-style endpoint.
-- Configure OpenAI-compatible cloud services with the endpoint and model identifiers they provide.
-- Configure Anthropic Claude and Google Gemini for the capabilities their APIs support.
-- Keep several model profiles ready and choose the one that fits the current assistant or project.
-
-Model, quantization, server, chat-template, streaming, reasoning, and tool-calling compatibility varies. Test a profile with a low-risk Workspace before granting broader access.
-
-## Preview platforms
-
-| Target | Status | Guidance |
-|---|---|---|
-| Windows desktop | Recommended preview experience | Use the installer or portable archive. |
-| Android | Early sideloaded preview | Requires Android 7.0 (API 24) or later; supports arm64-v8a devices and x86_64 emulators. |
-| Web | In development | No public web preview yet. |
-| macOS | In development | No public macOS release yet. |
-| iOS | In development | No public iOS release yet. |
-
-## Start here
-
-1. Follow [Getting started](GETTING-STARTED.md).
-2. Read [Preview scope and expectations](PREVIEW.md).
-3. Review [Privacy](PRIVACY.md) and [Security](SECURITY.md).
-4. Configure provider-side limits using [Token usage and provider billing](TOKEN-USAGE-AND-BILLING.md).
-5. Use [Support](SUPPORT.md) when you need help or want to report a reproducible problem.
-
-## Local access deserves care
-
-Atraium can work with real files, processes, applications, services, and model-provider accounts. Begin with a temporary or low-risk Workspace, keep backups, and grant only the access required for the task.
-
-Never publish API keys, tokens, private endpoint URLs, confidential prompts, customer data, source code, sensitive logs, or private files in a public issue.
-
-## About this repository
-
-This is the public **binary-preview and documentation repository**. It contains release downloads, versioned notes, safety guidance, and feedback channels. It does not contain the Atraium application source code.
-
-Any future public source release and its licence will be announced separately.
-
-Feedback is welcome through [GitHub Issues](https://github.com/daemosofchaos/Atraium-Preview/issues). Describe the workflow you attempted, what you expected, what happened, and whether it is reproducible.
+This repository contains the public preview downloads, documentation and feedback channels, not the Atraium application source. Any future public source release and its licence will be announced separately.

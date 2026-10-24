@@ -1,0 +1,6 @@
+activity,role,hours,hourly_rate_zar_ex_tax,source
+Site survey,Engineer,8,650,Synthetic sample rate
+Cabling installation,Technician,24,350,Synthetic sample rate
+Network configuration,Engineer,12,650,Synthetic sample rate
+Acceptance testing,Engineer,8,650,Synthetic sample rate
+Project coordination,Project manager,6,500,Synthetic sample rate

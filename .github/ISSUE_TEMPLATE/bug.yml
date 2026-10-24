@@ -19,15 +19,16 @@ body:
     attributes:
       label: Atraium preview version
       description: Find the version in the application or release name.
-      placeholder: 0.1.0-preview.1
+      placeholder: 0.4.2-preview.1
     validations:
       required: true
 
   - type: input
     id: windows
     attributes:
-      label: Windows version
-      placeholder: Windows 11 24H2
+      label: Operating system and device
+      description: Include the OS version and, for Android, the device model.
+      placeholder: Windows 11, or Android 15 on a Pixel 8
     validations:
       required: true
 
@@ -38,6 +39,8 @@ body:
       options:
         - Windows installer
         - Portable Windows archive
+        - Android APK
+        - Android preview bundle
         - Other
     validations:
       required: true
@@ -50,6 +53,8 @@ body:
       options:
         - OpenAI
         - Azure OpenAI
+        - Anthropic Claude
+        - Google Gemini
         - OpenAI-compatible hosted provider
         - Local or self-hosted compatible endpoint
         - Not provider-related
@@ -69,10 +74,14 @@ body:
         - Utility
         - Search or grounding
         - Rooms and messages
+        - Workspaces, notes or tasks
         - Local files or processes
         - Visual Studio workflows
         - Documents or presentations
         - Images
+        - Voice, transcription or realtime
+        - Inline visuals
+        - Message or artifact exports
         - Plugins
         - MCP
         - Backup or restore
