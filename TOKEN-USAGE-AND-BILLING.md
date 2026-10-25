@@ -20,6 +20,7 @@ Consumer ChatGPT, Claude or Gemini subscriptions do not necessarily include API 
 | Research | Model requests, search queries, grounding/retrieval or hosted service charges. |
 | Memory | Embeddings and semantic processing. |
 | Images | Generated outputs, edits, resolution/quality or provider-specific units. |
+| Videos | Hosted generation, clip duration, resolution, audio or provider-specific units; GPU compute for self-hosted generation. |
 | Speech and realtime | Audio duration, transcription, generated speech and active sessions. |
 | Tools and integrations | Follow-up model calls and any paid MCP/plugin/external services. |
 | Self-hosting | Compute rental, electricity, hardware, storage and bandwidth. |
@@ -30,9 +31,9 @@ A local tool does not necessarily have its own provider charge. However, the mod
 
 ## One assistant can use several services
 
-Review all capability assignments, not only Chat. Utility, embeddings, images, speech and realtime may use different profiles. Brave web grounding is a separate service with its own key, quota and pricing. MCP servers and plugins can add other services.
+Review all capability assignments, not only Chat. Utility, embeddings, images, videos, speech and realtime may use different profiles. Brave web grounding is a separate service with its own key, quota and pricing. MCP servers and plugins can add other services.
 
-For example, a local Chat model can still produce remote charges if Utility, search or image generation uses a hosted service. A Room or Workspace model override can also change where later requests are billed.
+For example, a local Chat model can still produce remote charges if Utility, search, image generation or video generation uses a hosted service. A Room or Workspace model override can also change where later requests are billed.
 
 ## Use cost-appropriate settings
 
