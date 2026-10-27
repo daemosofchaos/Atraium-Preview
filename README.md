@@ -28,17 +28,17 @@ Codex and Claude Code also perform autonomous work. Choose Atraium when you want
 
 ## Download
 
-The latest public release is **[0.4.3 Preview 3](https://github.com/daemosofchaos/Atraium-Preview/releases/tag/v0.4.3-preview.3)**. Windows is the recommended preview experience; Android is an early sideloaded preview.
+The latest public release is **[0.5.0 Preview 1](https://github.com/daemosofchaos/Atraium-Preview/releases/tag/v0.5.0-preview.1)**. Windows is the recommended preview experience; Android is an early sideloaded preview.
 
 | Package | Choose this when… |
 |---|---|
-| [Windows x64 installer](https://github.com/daemosofchaos/Atraium-Preview/releases/download/v0.4.3-preview.3/Atraium-0.4.3-preview.3-win-x64-setup.exe) | You want a normal installation for your Windows account. |
-| [Windows x64 portable ZIP](https://github.com/daemosofchaos/Atraium-Preview/releases/download/v0.4.3-preview.3/Atraium-0.4.3-preview.3-win-x64-portable.zip) | You want to extract the application and run it without an installer. |
-| [Android APK](https://github.com/daemosofchaos/Atraium-Preview/releases/download/v0.4.3-preview.3/Atraium-0.4.3-preview.3-android.apk) | You want to sideload on an Android 7.0+ arm64-v8a device or x86_64 emulator. |
-| [Android preview ZIP](https://github.com/daemosofchaos/Atraium-Preview/releases/download/v0.4.3-preview.3/Atraium-0.4.3-preview.3-android-preview.zip) | You want the same APK with the preview, privacy, security and billing documents. |
-| [SHA-256 checksums](https://github.com/daemosofchaos/Atraium-Preview/releases/download/v0.4.3-preview.3/Atraium-0.4.3-preview.3-SHA256SUMS.txt) | Verify the package before installing or running it. |
+| [Windows x64 installer](https://github.com/daemosofchaos/Atraium-Preview/releases/download/v0.5.0-preview.1/Atraium-0.5.0-preview.1-win-x64-setup.exe) | You want a normal installation for your Windows account. |
+| [Windows x64 portable ZIP](https://github.com/daemosofchaos/Atraium-Preview/releases/download/v0.5.0-preview.1/Atraium-0.5.0-preview.1-win-x64-portable.zip) | You want to extract the application and run it without an installer. |
+| [Android APK](https://github.com/daemosofchaos/Atraium-Preview/releases/download/v0.5.0-preview.1/Atraium-0.5.0-preview.1-android.apk) | You want to sideload on an Android 7.0+ arm64-v8a device or x86_64 emulator. |
+| [Android preview ZIP](https://github.com/daemosofchaos/Atraium-Preview/releases/download/v0.5.0-preview.1/Atraium-0.5.0-preview.1-android-preview.zip) | You want the same APK with the preview, privacy, security and billing documents. |
+| [SHA-256 checksums](https://github.com/daemosofchaos/Atraium-Preview/releases/download/v0.5.0-preview.1/Atraium-0.5.0-preview.1-SHA256SUMS.txt) | Verify the package before installing or running it. |
 
-[All releases](https://github.com/daemosofchaos/Atraium-Preview/releases) · [What's new in 0.4.2](release-notes/v0.4.3-preview.3.md) · [Installation instructions](GETTING-STARTED.md#install-atraium)
+[All releases](https://github.com/daemosofchaos/Atraium-Preview/releases) · [What's new in 0.4.2](release-notes/v0.5.0-preview.1.md) · [Installation instructions](GETTING-STARTED.md#install-atraium)
 
 > **Bring-your-own-model means bring-your-own account or server.** Atraium does not include model downloads, API keys or credits. A ChatGPT, Claude or Gemini consumer subscription is not necessarily an API account. You are responsible for provider and infrastructure charges; set provider-side spending limits before adding a paid key. See [Billing](TOKEN-USAGE-AND-BILLING.md).
 
