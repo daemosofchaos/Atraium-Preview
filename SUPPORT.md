@@ -8,6 +8,7 @@ Start with the guide closest to the problem:
 | OpenAI, Claude, Gemini, Azure or a custom endpoint | [Model setup](docs/model-setup.md) |
 | LM Studio, Ollama or a server used from Android | [Local models](docs/local-models.md) |
 | Workspaces, tools and folder access | [Workspaces and tools](docs/workspaces-and-tools.md) |
+| Supervisor teams, shared limits or interrupted assignments | [Work delegation](docs/supervisor-workspaces.md) |
 | PDFs, visuals or saving existing work | [Documents and exports](docs/documents-and-exports.md) |
 | Images or speech | [Images and voice](docs/images-and-voice.md) |
 | An error or an unexpected result | [Troubleshooting](docs/troubleshooting.md) |
@@ -29,6 +30,8 @@ For a bug, include:
 - whether the issue happens consistently.
 
 For a tool problem, include its visible source/action and whether it uses Direct or Gateway. For a local model, identify the serving application, model and relevant context/quantization settings when safe to share.
+
+For delegation, include the visible assignment status, whether nested supervision was enabled, the configured limits, and whether the issue followed pause, stop or an application interruption. Use non-sensitive example objectives; do not publish private worker conversations or project files.
 
 For a suggestion, explain what you wanted to accomplish, what got in the way and what would make the result useful. A concrete example is more helpful than a feature name alone.
 

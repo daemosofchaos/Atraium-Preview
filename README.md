@@ -8,7 +8,9 @@ Atraium gives an assistant the tools and working environment to act as an **inde
 
 Hosted and local models connect to coding, research and document tools, with conversations, notes, tasks and deliverables kept in project workspaces. You choose the model, the responsibility and the access.
 
-[Download](#download) · [Get started](GETTING-STARTED.md) · [Delegate a complete project](docs/independent-assistants.md) · [Connect a model](docs/model-setup.md) · [Documentation](docs/README.md) · [Official website](https://atraium.com)
+For projects with several workstreams, **Supervisor workspaces** let an assistant create focused workers, collect their results and bring the work together. Workers can coordinate teams of their own when you allow it, with shared limits and visible assignment progress.
+
+[Download](#download) · [Get started](GETTING-STARTED.md) · [Work delegation](docs/supervisor-workspaces.md) · [Connect a model](docs/model-setup.md) · [Documentation](docs/README.md) · [Official website](https://atraium.com)
 
 ## What would you delegate?
 
@@ -26,6 +28,20 @@ Atraium brings **model choice, reusable assistant roles, visible project records
 
 Codex and Claude Code also perform autonomous work. Choose Atraium when you want this integrated, multi-provider workspace experience across software and business deliverables—not because autonomy belongs to only one product. [How Atraium fits](docs/independent-assistants.md#why-choose-atraium-for-this-work).
 
+## One project, a coordinated team
+
+**New in 0.5.0 Preview 1:** enable **Supervisor delegation** in Workspace settings to divide a project into focused assignments within the same Room. Each worker has its own conversation and saved work; the Supervisor reviews the results and produces the combined outcome.
+
+For example, ask for separate read-only reviews of a repository's tests and documentation, then one prioritised report with evidence and follow-up tasks. For larger projects, **Allow nested Supervisors** lets a workstream lead organise its own specialists.
+
+- **Follow the work:** inspect the assignment hierarchy, open worker workspaces and review returned results.
+- **Set shared limits:** control team size, nesting depth, concurrent model work, request counts and duration.
+- **Stay in control:** pause for input, explicitly resume, or stop a branch and its descendants. Completed external actions are not undone.
+
+Delegation does not create a file sandbox or a provider spending cap. Assign non-overlapping file responsibilities, review important results and keep provider-side budgets in place.
+
+[Start a delegated project](docs/supervisor-workspaces.md#start-your-first-delegated-project) · [Try a team review](docs/use-cases.md#coordinate-a-repository-review-with-a-team)
+
 ## Download
 
 The latest public release is **[0.5.0 Preview 1](https://github.com/daemosofchaos/Atraium-Preview/releases/tag/v0.5.0-preview.1)**. Windows is the recommended preview experience; Android is an early sideloaded preview.
@@ -38,14 +54,14 @@ The latest public release is **[0.5.0 Preview 1](https://github.com/daemosofchao
 | [Android preview ZIP](https://github.com/daemosofchaos/Atraium-Preview/releases/download/v0.5.0-preview.1/Atraium-0.5.0-preview.1-android-preview.zip) | You want the same APK with the preview, privacy, security and billing documents. |
 | [SHA-256 checksums](https://github.com/daemosofchaos/Atraium-Preview/releases/download/v0.5.0-preview.1/Atraium-0.5.0-preview.1-SHA256SUMS.txt) | Verify the package before installing or running it. |
 
-[All releases](https://github.com/daemosofchaos/Atraium-Preview/releases) · [What's new in 0.4.2](release-notes/v0.5.0-preview.1.md) · [Installation instructions](GETTING-STARTED.md#install-atraium)
+[All releases](https://github.com/daemosofchaos/Atraium-Preview/releases) · [What's new in 0.5.0](release-notes/v0.5.0-preview.1.md) · [Installation instructions](GETTING-STARTED.md#install-atraium)
 
 > **Bring-your-own-model means bring-your-own account or server.** Atraium does not include model downloads, API keys or credits. A ChatGPT, Claude or Gemini consumer subscription is not necessarily an API account. You are responsible for provider and infrastructure charges; set provider-side spending limits before adding a paid key. See [Billing](TOKEN-USAGE-AND-BILLING.md).
 
 ## Your first assistant
 
 1. Install Atraium and create a model profile in first-run setup.
-2. Assign that profile to **Chat** and **Utility**. One text model can serve both; images, voice and web grounding can wait.
+2. Assign that profile to **Chat**. **Utility** is optional and uses Chat for supporting work when no ready Utility profile is assigned; images, voice and web grounding can wait.
 3. Create a Room for your assistant and use its Main workspace for your first task.
 4. Try this request:
 
@@ -78,6 +94,7 @@ You can save several profiles and choose a different model for a Room or Workspa
 | [Build a complete application](docs/use-cases.md#build-a-complete-application-from-a-brief) | A working project, build/test evidence, setup instructions and a handover. |
 | [Cost a complete project](docs/use-cases.md#produce-a-complete-project-costing) | An auditable workbook, budget comparison, risk scenarios and a client PDF. |
 | [Prepare a launch package](docs/use-cases.md#prepare-a-complete-launch-package) | A sourced assessment, positioning, presentation and actionable launch plan. |
+| [Coordinate a team review](docs/use-cases.md#coordinate-a-repository-review-with-a-team) | Focused worker findings, a checked combined report and clear follow-up tasks. |
 | [Research a purchase](docs/use-cases.md#compare-products-with-current-sources) | A sourced comparison, clear limitations and a saved recommendation. |
 | [Plan a project](docs/use-cases.md#turn-meeting-notes-into-a-project-plan) | An editable brief, decisions and next-step tasks. |
 | [Understand a CSV](docs/use-cases.md#explore-a-csv-and-create-a-chart) | Checked totals, an inline chart and reusable data. |
@@ -100,7 +117,7 @@ For example, a Business Room can have separate workspaces for a website refresh,
 
 ## Add capabilities when you need them
 
-Chat and Utility are enough to start. Add **Brave Search** for current web research, an image model for artwork, or specialized profiles for memory, speech and realtime interaction. Those services have their own account, access and cost requirements.
+One working Chat profile is enough to start. Assign a separate Utility profile only if you want another text model for supporting work. Add **Brave Search** for current web research, an image model for artwork, or specialized profiles for memory, speech and realtime interaction. Those services have their own account, access and cost requirements.
 
 Built-in tools cover documents, files, research, code and supported device actions. Broader tool catalogs are available through a searchable **Gateway**; selected tools can be **Direct**. Neither route grants file permission. Compatible MCP servers can add tools, but should be treated as trusted integrations with real access—not as harmless prompts.
 

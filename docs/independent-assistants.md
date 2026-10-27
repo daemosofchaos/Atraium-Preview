@@ -39,6 +39,18 @@ Choose Atraium when you want **one working environment for coding, research and 
 
 For example, the same product project can include an implemented demo, its cost estimate, customer research and a presentation. You can keep those as separate workspaces in one Room, with different model choices and instructions where useful. The value is the integrated working environment—not a claim that another agent cannot accomplish similar tasks.
 
+## Coordinate several workstreams
+
+An independent assistant can also coordinate a team. Enable **Supervisor delegation** in Workspace settings, give it a project objective and let it create focused workers or assign work to available workspaces in the same Room.
+
+For a repository review, one worker can examine tests while another checks documentation. The Supervisor collects the evidence, resolves conflicting findings and delivers a combined report. For a larger launch, a research lead can organise its own specialists when nested supervision is allowed.
+
+Each worker keeps its own conversation and saved records. The assignment hierarchy makes progress and results visible; shared limits bound worker creation, nesting, model requests, concurrent work and duration. Those limits are not provider spending caps, and separate workspaces do not isolate shared files.
+
+Use a team when the work divides cleanly. For a small task, one assistant may be more efficient. Define non-overlapping responsibilities and keep final integration and review under one owner.
+
+[Supervisor setup and controls](supervisor-workspaces.md) · [Team review example](use-cases.md#coordinate-a-repository-review-with-a-team)
+
 ## Choose a model for the responsibility
 
 Long projects need reliable tool use, planning, error recovery and enough context for the work. A model's ability to answer a short question is not enough to establish that.

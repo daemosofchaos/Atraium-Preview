@@ -31,7 +31,7 @@ Smaller models can implement and improve software as well as draft or summarize,
 | Deployment | Blank |
 | API key | Your server token if authentication is enabled; otherwise a non-secret placeholder such as `lm-studio` if Atraium requires a value. |
 
-Use **Test connection**, save, and assign the profile to **Chat** and **Utility**.
+Use **Test connection**, save, and assign the profile to **Chat**. Utility is optional; leave it unassigned to use Chat for supporting work.
 
 To inspect model IDs without generating text, use PowerShell against an unauthenticated local server:
 
@@ -77,7 +77,7 @@ Create the Atraium profile:
 | Deployment | Blank |
 | API key | Non-secret placeholder `ollama` for the default unauthenticated local server; a real token if you use a protected gateway. |
 
-Use **Test connection**, save and assign it to Chat and Utility. If Ollama is not already running, start the application or run this in a separate terminal:
+Use **Test connection**, save and assign it to Chat. Utility can use Chat or a separate suitable profile. If Ollama is not already running, start the application or run this in a separate terminal:
 
 ```powershell
 ollama serve
@@ -106,7 +106,7 @@ It has **35B total and 3B active parameters**. The active-parameter figure descr
 1. Use a current LM Studio runtime that supports the model's architecture. Check the selected model publisher's compatibility guidance before downloading.
 2. Select a suitable GGUF conversion, such as the [community conversions by bartowski](https://huggingface.co/bartowski/Kwaipilot_KAT-Coder-V2.5-Dev-GGUF). These are community packages, not Kwaipilot's original weights. Choose a quantization your hardware can load.
 3. Load the model and start the API server as described in [LM Studio setup](#lm-studio). Copy the exact ID exposed by the server.
-4. Create an OpenAI-compatible Text generation profile using Chat Completions, your server's base URL and that model ID. Assign it to Chat and Utility.
+4. Create an OpenAI-compatible Text generation profile using Chat Completions, your server's base URL and that model ID. Assign it to Chat; leave Utility unassigned to use the same local model for supporting work.
 
 For scale, the community `Q4_K_M` file is about **21.39 GB on disk**; this is not a minimum VRAM specification or the total memory needed to run it. A download that fits on disk may still exceed available memory. If the model does not load, check runner/architecture support and memory before changing Atraium settings.
 
@@ -176,9 +176,17 @@ A private-network address such as `192.168.1.20` is only illustrative; use the h
 
 Remote inference sends prompts and relevant context to that server. Self-hosted does not mean the data stays on the phone. Windows-specific file and application tools do not become available on Android just because the model runs on Windows.
 
+## Coordinate a team on a local server
+
+Supervisor workspaces can use a compatible local or self-hosted tool-capable model. Begin with a small assignment and low concurrency: several active requests can increase model memory use or queue behind the same server.
+
+Choose a model that handles delegation tools and the workers' actual tasks reliably. A successful text connection test is not enough. Keep the team brief focused, review the results, and leave remote capabilities unassigned if the project must stay local.
+
+[Supervisor setup and limits](supervisor-workspaces.md) · [Example team review](use-cases.md#coordinate-a-repository-review-with-a-team)
+
 ## Keep a setup local when privacy matters
 
-Use local profiles for both Chat and Utility, and leave remote search, media services and extensions unconfigured if the content must stay on the device. Embeddings and other optional capabilities must also use local endpoints if enabled.
+Use a local Chat profile, with Utility unassigned or assigned to another local profile. Leave remote search, media services and extensions unconfigured if the content must stay on the device. Embeddings and other optional capabilities must also use local endpoints if enabled. Review worker model overrides before delegating sensitive work.
 
 After model downloads, local inference can work without cloud model calls, but Atraium's **local-first** design is not an offline guarantee for every feature. Check each configured provider and integration.
 

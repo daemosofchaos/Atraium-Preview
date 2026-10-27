@@ -2,7 +2,7 @@
 
 Atraium helps you give an assistant responsibility for practical work: complete applications, project costings, research, launch packages, documents and media. Hosted or local models use the tools you select, with conversations, notes, tasks and results kept in workspaces.
 
-The current public release is **[0.4.2 Preview 1](https://github.com/daemosofchaos/Atraium-Preview/releases/tag/v0.4.2-preview.1)**. Read its [release notes](release-notes/v0.4.2-preview.1.md) for version-specific changes.
+The current public release is **[0.5.0 Preview 1](https://github.com/daemosofchaos/Atraium-Preview/releases/tag/v0.5.0-preview.1)**. Read its [release notes](release-notes/v0.5.0-preview.1.md) for version-specific changes.
 
 ## Available platforms
 
@@ -17,7 +17,9 @@ Android requests camera, microphone, foreground location and calendar permission
 ## What you can use
 
 - Independent project work with a capable model and the required access: implementation, checking, repair and finished deliverables, not only planning or advice.
-- Hosted and compatible local/self-hosted text models, with separate Chat and Utility assignments.
+- Supervisor workspaces for coordinated assignments, optional nested teams, visible worker results and shared limits.
+- Hosted and compatible local/self-hosted text models, with a required Chat profile and optional Utility assignment.
+- Guided first-run setup and feature tours, with replay in Tutorials and guides.
 - Native Anthropic Claude and Google Gemini profiles, and OpenAI-compatible connections.
 - Rooms for assistant roles and workspaces for separate projects.
 - Editable notes, tasks, attachments and generated document artifacts.
@@ -30,6 +32,8 @@ Android requests camera, microphone, foreground location and calendar permission
 - Compatible MCP integrations and backup/restore features.
 
 Availability depends on the installed release, device, model, provider, services and granted access. Atraium does not bundle API credits, model-server software or model weights.
+
+Delegation remains within the same Room and cannot expand a worker's inherited tools or file-tool access. Shared request and time allowances are not currency spending caps. Interrupted assignments are not replayed automatically, and cancellation does not undo completed external actions. Read the [Supervisor guide](docs/supervisor-workspaces.md) before starting a team.
 
 [Setup guides](docs/README.md) · [Complete-project examples](docs/use-cases.md) · [Independent assistants](docs/independent-assistants.md)
 

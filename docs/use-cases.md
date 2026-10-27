@@ -1,6 +1,6 @@
 # Practical uses for Atraium
 
-Give an assistant a complete piece of work: a working application, an auditable project costing or a launch package with research and finished documents. These examples use ordinary prompts, not special commands. They assume Chat and Utility are configured with a suitable tool-capable model.
+Give an assistant a complete piece of work: a working application, an auditable project costing or a launch package with research and finished documents. These examples use ordinary prompts, not special commands. They assume Chat is configured with a suitable tool-capable model. Utility is optional and uses Chat for supporting work when no ready Utility profile is assigned.
 
 Create a separate workspace for a distinct project and provide the necessary tools and access. Smaller examples follow the complete-project briefs; they are useful for learning a feature or checking a new connection. Tool use and follow-up model requests can consume additional provider quota.
 
@@ -113,9 +113,35 @@ Without web grounding, replace live research with supplied competitor material a
 
 [Research setup](model-setup.md#web-research-with-brave-search) · [Independent assistants](independent-assistants.md)
 
+## Coordinate a repository review with a team
+
+**You need:** 0.5.0 Preview 1 or later, a suitable tool-capable text model, repository access and a workspace with **Enable Supervisor delegation** saved in its settings. Turn off **Allow nested Supervisors** for this first two-worker example, and review the shared limits.
+
+Supply the exact repository path. Use a working copy and disable mutation or command tools if the review must be strictly read-only.
+
+```text
+Coordinate a review of the repository at the path I supplied. Create two workers:
+one to inspect automated tests and one to inspect user documentation. Neither may
+edit files, run commands, browse externally or delegate further.
+
+Give each worker a self-contained brief. Ask for findings tied to specific files,
+the evidence checked and any information it could not verify. Collect the results,
+check the important claims and resolve disagreements before producing one report.
+
+Save the combined findings as a note in this workspace. Create prioritised tasks
+for confirmed gaps, distinguishing observed problems from suggestions. Finish with
+the source paths, what was reviewed and what still needs human review.
+```
+
+**What you should receive:** separate worker conversations and results, followed by a consolidated, evidence-based report and saved follow-up tasks. Follow the hierarchy in **Supervisor assignments** and open individual workspaces for the details.
+
+For a larger launch package, a Supervisor can assign research, positioning and presentation work to different workers. If a research lead needs its own team, enable nested supervision within the shared limits. Keep outputs in separate locations and give the final reconciliation to one owner. More workers can increase cost and coordination; use them only where the work divides usefully.
+
+[Delegation setup, limits and controls](supervisor-workspaces.md)
+
 ## Turn meeting notes into a project plan
 
-**You need:** Chat and Utility, with Workspace notes/tasks available. No web key or file access is needed.
+**You need:** a working Chat profile, with Workspace notes/tasks available. No web key or file access is needed.
 
 Create a Project plan workspace and paste this illustrative brief:
 
@@ -256,7 +282,7 @@ and camera angle. Produce one revised image.
 
 ## Work from supplied documents with a local model
 
-**You need:** a capable local model assigned to Chat and Utility, permitted document access, and no remote capabilities enabled for this task.
+**You need:** a capable local model assigned to Chat, permitted document access, and no remote capabilities enabled for this task. Leave Utility unassigned to use Chat, or assign another local profile.
 
 ```text
 Read the attached meeting notes and draft a one-page summary with decisions, open

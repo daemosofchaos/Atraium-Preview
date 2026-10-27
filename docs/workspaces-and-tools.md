@@ -35,6 +35,16 @@ Templates do not create provider accounts or grant access to a folder. The Room'
 
 Room instructions suit consistent preferences. Workspace instructions suit a specific project: audience, budget, technology constraints, source folder or deliverable requirements.
 
+## Coordinate work with a Supervisor
+
+Enable **Supervisor delegation** in Workspace settings when the project needs a coordinated team. It works independently of the template: a Coding room, Research board or blank workspace can be a Supervisor.
+
+The Supervisor can create specialist workspaces or assign focused work to available workspaces in the same Room. Workers retain their own conversations and records. If **Allow nested Supervisors** is enabled, a worker can organise its own team within the same shared allowances.
+
+Review the hierarchy, status, deadlines and returned results in **Supervisor assignments**. Open a worker workspace for its full conversation. Assign separate file responsibilities and ask the Supervisor to validate and combine the results; creating a team is not itself evidence that the work is complete.
+
+[Start a delegated project](supervisor-workspaces.md#start-your-first-delegated-project) · [Shared limits and controls](supervisor-workspaces.md#understand-the-shared-limits)
+
 ## Keep the important work easy to find
 
 | Surface | What belongs there |
@@ -78,13 +88,17 @@ Changing the main model starts a fresh provider conversation. Notes, tasks, inst
 
 Gateway does **not** mean disabled. Direct does **not** enable a disabled action or grant new file access.
 
+Enabled Direct tools also remain discoverable and usable through the Gateway. Changing the route does not change the action's permissions. In delegated work, workers cannot expand inherited tool availability or file-tool access.
+
 In new Rooms and Workspaces, core actions for Workspace records, local computer work, turn context, attachments and inline visuals default to Direct. Broader catalogs remain discoverable through the Gateway. Explicit saved choices and inherited overrides still apply.
 
 Use **Tools & access** to change a source or fine-tune individual tools. Workspace choices take precedence over Room defaults; per-tool overrides can refine a source. An assistant request for more direct access is a proposal for you to review, not an automatic permission change.
 
 ## Grant a working folder, not an entire drive
 
-For a file task, choose the specific project or output folder. Use a temporary copy while learning the preview, keep backups and start with read-only work when possible.
+File tools have full filesystem access by default within your operating-system permissions. To require approval of additional directory roots, enable **Require root access requests** in Room settings. Workspaces inherit that choice unless you set a Workspace-specific override.
+
+For a file task, supply the exact project and output paths. If root requests are required, approve only the directories needed. Use a temporary copy while learning the preview, keep backups and start with read-only work when possible. These controls govern file tools, not arbitrary shell commands or third-party integrations.
 
 Example:
 
@@ -93,7 +107,7 @@ Review the files in the approved project folder. Summarize its structure and rec
 three findings in a workspace note. Do not modify files or run commands yet.
 ```
 
-Separate workspaces are organizational boundaries, **not operating-system sandboxes**. Two assistants allowed to edit the same folder can still conflict. Coordinate file edits, and review model-generated commands before consequential use.
+Separate workspaces are organizational boundaries, **not operating-system sandboxes**. Two assistants allowed to edit the same folder can still conflict. Give workers non-overlapping files or folders and one integration owner. Coordinate file edits, and review model-generated commands before consequential use.
 
 ## Add MCP tools only when needed
 
@@ -108,5 +122,7 @@ A local stdio server requires its executable/runtime on the desktop; it is not a
 Atraium remembers the selected workspace in each Room. An active text response can continue when you navigate to another workspace; use the top-bar assistant activity menu to return to it or stop it.
 
 Closing the application is different from navigation and can interrupt active work. Before retrying, check what already completed. Stopping a response does not undo saved files or external actions, and requests already sent may still be billed.
+
+In a delegated assignment, **Stop response** pauses for your input; **Resume (user action)** explicitly continues it. **Stop branch** cancels an assignment and its descendants. Wait for cleanup before reusing or deleting the workspace. Interrupted delegated work is not replayed automatically. [Pause, stop and recovery](supervisor-workspaces.md#pause-stop-or-recover-work).
 
 [Use cases](use-cases.md) · [Security](../SECURITY.md) · [Troubleshooting](troubleshooting.md) · [Documentation](README.md)

@@ -17,7 +17,7 @@ Use only [official downloads](../README.md#download). [Installation instructions
 
 ## Chat is unavailable after setup
 
-Create and save a **Text generation** profile, then assign it to **Chat** and **Utility**. Both are required by first-run setup; the same profile can serve both.
+Create and save a **Text generation** profile, then assign it to **Chat**. Utility is optional and uses Chat for supporting work when no ready Utility profile is assigned.
 
 Saving or testing a profile alone does not assign it. Check the active Room/Workspace model choice if only one project fails.
 
@@ -78,6 +78,23 @@ An assistant may describe a saved note or action without actually calling a tool
 For MCP, check the server endpoint or desktop command, required runtime, credentials and discovery. An empty Plugins page is normal when no plugins are installed.
 
 [Access and routing](workspaces-and-tools.md#understand-tool-availability-and-routing).
+
+## Delegation does not start or stops early
+
+| Symptom | What to check |
+|---|---|
+| The assistant cannot create or assign workers | Version 0.5.0 Preview 1 or later; Enable Supervisor delegation saved in Workspace settings; relevant tools available. |
+| A target workspace is unavailable | It must be in the same Room, not archived and not already occupied by active work. |
+| A worker cannot create its own team | Allow nested Supervisors must be enabled, with depth and worker allowances remaining. |
+| The project reaches a limit | Shared worker/creation allowances, actual Chat / Utility requests and the absolute deadline; finished workers do not refund used allowances. |
+| Work is waiting for input | Review the paused assignment and explicitly choose Resume (user action). Checking progress does not resume it. |
+| Stop has not released the workspace | Wait for real cleanup. If cleanup reports a failure, Stop branch can retry cleanup without replaying completed work. |
+| An assignment is Interrupted after restarting | Inspect saved progress and external effects before explicitly starting another attempt; no automatic replay occurs. |
+| Settings or deletion are blocked | Stop the active branch and wait for cleanup before changing settings or retrying deletion. |
+
+Do not increase all limits or broaden file access as a first repair step. Check the specific error and try a small, low-risk assignment. Provider errors and quotas can also stop work; retries may be billable.
+
+[Supervisor guide](supervisor-workspaces.md) · [Team example](use-cases.md#coordinate-a-repository-review-with-a-team)
 
 ## A file cannot be read or saved
 

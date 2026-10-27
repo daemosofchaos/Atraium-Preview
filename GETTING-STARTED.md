@@ -57,10 +57,12 @@ Use the first-run **Model providers** step, or open **Setup & settings → Model
 1. Add a profile with **Text generation** as its purpose.
 2. Enter the provider, base endpoint, model ID and required API key. For an OpenAI-compatible service, choose its supported API mode.
 3. Use **Test connection** and save the profile.
-4. In **Chat and utility**, assign it to both **Chat** and **Utility**.
+4. In **Chat and utility**, assign it to **Chat**. Leave Utility unassigned unless you want a separate profile for supporting work.
 5. Leave optional memory, images, web grounding, realtime and speech unconfigured if you do not need them, then finish setup.
 
-Both Chat and Utility need a ready profile; **they can share the same one**. Outside the wizard, capability assignments are available in **Setup & settings → Advanced settings → LLM settings**.
+Only Chat needs a ready profile to finish setup. **Utility is optional** and uses Chat when no ready Utility profile is assigned. Outside the wizard, capability assignments are available in **Setup & settings → Advanced settings → LLM settings**.
+
+Guided setup highlights the actual controls as you configure the app. You can exit and return later, or choose backup import from the welcome screen. To revisit setup or an individual feature guide, open **Setup & settings → Tutorials and guides**. Replaying a guide does not reset your saved projects or provider connections.
 
 | Your model service | Provider choice | Base endpoint | API mode |
 |---|---|---|---|
@@ -100,12 +102,21 @@ Review the response, then open **Notes** and **Tasks**. These are shared project
 
 This small task checks that the model and tools are connected; it is not the limit of the assistant's role. Next, delegate a [complete application](docs/use-cases.md#build-a-complete-application-from-a-brief), [project costing](docs/use-cases.md#produce-a-complete-project-costing) or [launch package](docs/use-cases.md#prepare-a-complete-launch-package). The [independent-assistant guide](docs/independent-assistants.md) explains suitable models, access and completion criteria.
 
+## Try work delegation
+
+Once a small tool task works, create a project workspace and open **Workspace settings**. Turn on **Enable Supervisor delegation**, review the limits and save. Start with two focused assignments, such as read-only reviews of tests and documentation, and ask for one combined report.
+
+Use **Supervisor assignments** to follow progress and open workers' workspaces. Nested supervision is optional; leave it off for a first simple review. Delegation does not grant new tool or folder access, and additional model requests can create provider charges.
+
+[Step-by-step delegation guide](docs/supervisor-workspaces.md) · [Example team brief](docs/use-cases.md#coordinate-a-repository-review-with-a-team)
+
 ## Add only what your next task needs
 
 | Want to… | Add… |
 |---|---|
 | Build an application | A capable coding/tool model, an approved writable project folder, file/command tools and the required SDKs. |
 | Produce a complete costing | Scope, quantities, rates/quotes, spreadsheet/PDF tools and an output folder. |
+| Coordinate several workstreams | Supervisor delegation, focused assignments, shared limits and tools/access appropriate to each worker. |
 | Research current information | A **Brave Search API key** in Web grounding; this is separate from model profiles. |
 | Work with local files | Access to the specific working folder and the relevant tools. |
 | Create images | A separate image-capable profile assigned to Image generation. |

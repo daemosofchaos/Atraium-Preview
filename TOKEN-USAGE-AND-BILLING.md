@@ -35,6 +35,16 @@ Review all capability assignments, not only Chat. Utility, embeddings, images, v
 
 For example, a local Chat model can still produce remote charges if Utility, search, image generation or video generation uses a hosted service. A Room or Workspace model override can also change where later requests are billed.
 
+## Budget for a coordinated team
+
+A Supervisor and its workers can make several model requests for one project. Nested teams add to the same shared Chat / Utility request allowance; retries and follow-up requests also count. Completing a worker does not restore the project's used allowances, and checking progress does not extend its deadline.
+
+**Delegation limits are not monetary spending caps.** They do not fix the number of tokens in each request or cap separately billed search, media, MCP services or infrastructure. More workers are not automatically cheaper or faster.
+
+Begin with a small team, modest concurrency and a narrow brief. Review the model and capability profiles involved, set provider-side budgets and quotas, and monitor every relevant account. Stopping a branch does not reverse completed tool actions or charges already incurred.
+
+[Supervisor limits and controls](docs/supervisor-workspaces.md#understand-the-shared-limits)
+
 ## Use cost-appropriate settings
 
 - Start with small tasks and modest input sizes.

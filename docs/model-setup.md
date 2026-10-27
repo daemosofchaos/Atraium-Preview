@@ -8,10 +8,10 @@ A model profile stores a reusable connection. Choose a provider, enter its endpo
 
 Open **Setup & settings → Model providers**, or use first-run setup. Add a profile with purpose **Text generation**, complete the fields, use **Test connection**, and save it.
 
-Assign it to **Chat** and **Utility** in the wizard's **Chat and utility** step. After setup, assignments are available in **Setup & settings → Advanced settings → LLM settings**. Both are required for first-run setup; one profile can serve both.
+Assign it to **Chat** in the wizard's **Chat and utility** step. Utility is optional; leave it unassigned to use Chat for supporting work. After setup, assignments are available in **Setup & settings → Advanced settings → LLM settings**.
 
 - **Chat** handles your main conversation and tool requests.
-- **Utility** handles supporting model work. It can use the same connection or another suitable text model.
+- **Utility** handles supporting model work. It uses Chat when no ready Utility profile is assigned, or a separate suitable text profile when you choose one.
 - **Model** is an API identifier, not a consumer product name or the profile's display name.
 - **Deployment** is usually blank; Azure uses your deployed resource name.
 
@@ -32,7 +32,7 @@ Create an API project and key in the [OpenAI platform](https://platform.openai.c
 | Deployment | Blank |
 | API key | Your OpenAI project key |
 
-Save and assign the profile to Chat and Utility. Start with default limits and a short prompt, then check the model's documented context and pricing before larger tasks. Leave temperature, top-p and reasoning options unset when the model does not support them.
+Save and assign the profile to Chat. A separate Utility assignment is optional. Start with default limits and a short prompt, then check the model's documented context and pricing before larger tasks. Leave temperature, top-p and reasoning options unset when the model does not support them.
 
 The endpoint is a **base URL**: do not append an individual `/responses` or `/chat/completions` operation.
 
@@ -96,7 +96,7 @@ Create a key in [Google AI Studio](https://aistudio.google.com/) and choose a cu
 | Deployment | Blank |
 | API key | Your Google AI API key |
 
-This uses the native Gemini API, not an OpenAI proxy or a Vertex AI service-account connection. Save and assign it to Chat and Utility.
+This uses the native Gemini API, not an OpenAI proxy or a Vertex AI service-account connection. Save and assign it to Chat; Utility can use Chat or a separate suitable profile.
 
 Gemini's image, embedding, speech and realtime features require appropriate specialized models and assignments. Do not copy a text-only model into every capability. If an older installation suggests a retired model, choose a current compatible replacement and test a small request.
 
@@ -172,8 +172,9 @@ and save the recommendation as a workspace note. Do not sign up or buy anything.
 | Build a complete app | A capable coding/tool model, a writable project folder, file/command tools and the project's SDK/test tooling. |
 | Complete a project costing | A reasoning/tool model, supplied scope/rates/quantities, spreadsheet/PDF tools and an output folder. |
 | Prepare a launch package | A suitable text model, approved product/pricing inputs, research access where needed and presentation/document tools. |
-| Simplest start | One suitable text profile assigned to Chat and Utility; optional capabilities left unassigned. |
-| Local document work | Local Chat and Utility; only necessary file access; no remote search or extensions. |
+| Coordinate a team | A Supervisor workspace with focused assignments, suitable tool-capable models and shared delegation limits. |
+| Simplest start | One suitable text profile assigned to Chat; Utility and other optional capabilities left unassigned. |
+| Local document work | Local Chat, with Utility unassigned or local; only necessary file access; no remote search or extensions. |
 | Current research | Your preferred text profile plus a separate Brave Search key. |
 | Text with artwork | A text profile plus a separate image-generation profile. |
 | Compare model quality or cost | Several text profiles; select one for a Room or a specific Workspace. |
