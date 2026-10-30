@@ -56,17 +56,17 @@ Keep the same approach across projects, or share the right guidance with each sp
 
 ## Download
 
-The latest public release is **[0.5.0 Preview 2](https://github.com/daemosofchaos/Atraium-Preview/releases/tag/v0.5.0-preview.2)**. Windows is the recommended preview experience; Android is an early sideloaded preview.
+The latest public release is **[0.6.0 Preview 1](https://github.com/daemosofchaos/Atraium-Preview/releases/tag/v0.6.0-preview.1)**. Windows is the recommended preview experience; Android is an early sideloaded preview.
 
 | Package | Choose this when… |
 |---|---|
-| [Windows x64 installer](https://github.com/daemosofchaos/Atraium-Preview/releases/download/v0.5.0-preview.2/Atraium-0.5.0-preview.2-win-x64-setup.exe) | You want a normal installation for your Windows account. |
-| [Windows x64 portable ZIP](https://github.com/daemosofchaos/Atraium-Preview/releases/download/v0.5.0-preview.2/Atraium-0.5.0-preview.2-win-x64-portable.zip) | You want to extract the application and run it without an installer. |
-| [Android APK](https://github.com/daemosofchaos/Atraium-Preview/releases/download/v0.5.0-preview.2/Atraium-0.5.0-preview.2-android.apk) | You want to sideload on an Android 7.0+ arm64-v8a device or x86_64 emulator. |
-| [Android preview ZIP](https://github.com/daemosofchaos/Atraium-Preview/releases/download/v0.5.0-preview.2/Atraium-0.5.0-preview.2-android-preview.zip) | You want the same APK with the preview, privacy, security and billing documents. |
-| [SHA-256 checksums](https://github.com/daemosofchaos/Atraium-Preview/releases/download/v0.5.0-preview.2/Atraium-0.5.0-preview.2-SHA256SUMS.txt) | Verify the package before installing or running it. |
+| [Windows x64 installer](https://github.com/daemosofchaos/Atraium-Preview/releases/download/v0.6.0-preview.1/Atraium-0.6.0-preview.1-win-x64-setup.exe) | You want a normal installation for your Windows account. |
+| [Windows x64 portable ZIP](https://github.com/daemosofchaos/Atraium-Preview/releases/download/v0.6.0-preview.1/Atraium-0.6.0-preview.1-win-x64-portable.zip) | You want to extract the application and run it without an installer. |
+| [Android APK](https://github.com/daemosofchaos/Atraium-Preview/releases/download/v0.6.0-preview.1/Atraium-0.6.0-preview.1-android.apk) | You want to sideload on an Android 7.0+ arm64-v8a device or x86_64 emulator. |
+| [Android preview ZIP](https://github.com/daemosofchaos/Atraium-Preview/releases/download/v0.6.0-preview.1/Atraium-0.6.0-preview.1-android-preview.zip) | You want the same APK with the preview, privacy, security and billing documents. |
+| [SHA-256 checksums](https://github.com/daemosofchaos/Atraium-Preview/releases/download/v0.6.0-preview.1/Atraium-0.6.0-preview.1-SHA256SUMS.txt) | Verify the package before installing or running it. |
 
-[All releases](https://github.com/daemosofchaos/Atraium-Preview/releases) · [What's new in 0.5.0](release-notes/v0.5.0-preview.2.md) · [Installation instructions](GETTING-STARTED.md#install-atraium)
+[All releases](https://github.com/daemosofchaos/Atraium-Preview/releases) · [What's new in 0.5.0](release-notes/v0.6.0-preview.1.md) · [Installation instructions](GETTING-STARTED.md#install-atraium)
 
 The 0.6.0 Preview 1 notes and guides are prepared here for the next preview. They do not announce available 0.6.0 downloads; use the published release above until new packages are listed on official Releases.
 
