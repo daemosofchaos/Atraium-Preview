@@ -10,7 +10,7 @@ Hosted and local models connect to coding, research and document tools, with con
 
 For projects with several workstreams, **Supervisor workspaces** let an assistant create focused workers, collect their results and bring the work together. Workers can coordinate teams of their own when you allow it, with shared limits and visible assignment progress.
 
-**Coming in 0.6.0 Preview 1: Skills.** Keep reusable methods and checklists, request guidance for one message, and turn a useful response into a reviewed workflow draft. [Read the prepared release notes](release-notes/v0.6.0-preview.1.md).
+**New in 0.6.0 Preview 1: Skills.** Keep reusable methods and checklists, request guidance for one message, and turn a useful response into a reviewed workflow draft. [Read the release notes](release-notes/v0.6.0-preview.1.md).
 
 [Download](#download) · [Get started](GETTING-STARTED.md) · [Skills](docs/skills.md) · [Work delegation](docs/supervisor-workspaces.md) · [Connect a model](docs/model-setup.md) · [Documentation](docs/README.md) · [Official website](https://atraium.com)
 
@@ -66,9 +66,7 @@ The latest public release is **[0.6.0 Preview 1](https://github.com/daemosofchao
 | [Android preview ZIP](https://github.com/daemosofchaos/Atraium-Preview/releases/download/v0.6.0-preview.1/Atraium-0.6.0-preview.1-android-preview.zip) | You want the same APK with the preview, privacy, security and billing documents. |
 | [SHA-256 checksums](https://github.com/daemosofchaos/Atraium-Preview/releases/download/v0.6.0-preview.1/Atraium-0.6.0-preview.1-SHA256SUMS.txt) | Verify the package before installing or running it. |
 
-[All releases](https://github.com/daemosofchaos/Atraium-Preview/releases) · [What's new in 0.5.0](release-notes/v0.6.0-preview.1.md) · [Installation instructions](GETTING-STARTED.md#install-atraium)
-
-The 0.6.0 Preview 1 notes and guides are prepared here for the next preview. They do not announce available 0.6.0 downloads; use the published release above until new packages are listed on official Releases.
+[All releases](https://github.com/daemosofchaos/Atraium-Preview/releases) · [What's new in 0.6.0](release-notes/v0.6.0-preview.1.md) · [Installation instructions](GETTING-STARTED.md#install-atraium)
 
 > **Bring-your-own-model means bring-your-own account or server.** Atraium does not include model downloads, API keys or credits. A ChatGPT, Claude or Gemini consumer subscription is not necessarily an API account. You are responsible for provider and infrastructure charges; set provider-side spending limits before adding a paid key. See [Billing](TOKEN-USAGE-AND-BILLING.md).
 

@@ -1,6 +1,6 @@
 # Atraium documentation
 
-Begin with one text model and add capabilities as you need them. **0.5.0 Preview 2** remains the current public download. The Skills guide and updated Supervisor guide describe **0.6.0 Preview 1**; check your installed version and the release notes before using those additions.
+Begin with one text model and add capabilities as you need them.
 
 ## New to Atraium?
 
@@ -34,6 +34,6 @@ Download or save a sample locally before attaching it or asking Atraium to read 
 
 [Privacy](../PRIVACY.md) · [Security](../SECURITY.md) · [Provider billing](../TOKEN-USAGE-AND-BILLING.md) · [Preview scope](../PREVIEW.md) · [Binary preview terms](../BINARY-PREVIEW-TERMS.md)
 
-For help, see [Support](../SUPPORT.md). Read the [current 0.5.0 Preview 2 notes](../release-notes/v0.5.0-preview.2.md), the [prepared 0.6.0 Preview 1 notes](../release-notes/v0.6.0-preview.1.md), or browse [GitHub Releases](https://github.com/daemosofchaos/Atraium-Preview/releases).
+For help, see [Support](../SUPPORT.md). Read the [0.6.0 Preview 1 release notes](../release-notes/v0.6.0-preview.1.md) or browse [GitHub Releases](https://github.com/daemosofchaos/Atraium-Preview/releases).
 
 [Back to the preview homepage](../README.md)

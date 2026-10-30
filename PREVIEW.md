@@ -2,7 +2,7 @@
 
 Atraium helps you give an assistant responsibility for practical work: complete applications, project costings, research, launch packages, documents and media. Hosted or local models use the tools you select, with conversations, notes, tasks and results kept in workspaces.
 
-The current public release is **[0.5.0 Preview 2](https://github.com/daemosofchaos/Atraium-Preview/releases/tag/v0.5.0-preview.2)**. Read its [release notes](release-notes/v0.5.0-preview.2.md) for version-specific changes. The [0.6.0 Preview 1 notes](release-notes/v0.6.0-preview.1.md) and Skills guidance are prepared for the next preview; no 0.6.0 package is announced here until it appears on official Releases.
+The current public release is **[0.6.0 Preview 1](https://github.com/daemosofchaos/Atraium-Preview/releases/tag/v0.6.0-preview.1)**. Read its [release notes](release-notes/v0.6.0-preview.1.md) for version-specific changes.
 
 ## Available platforms
 
@@ -37,9 +37,7 @@ Delegation remains within the same Room and cannot expand a worker's inherited t
 
 [Setup guides](docs/README.md) · [Complete-project examples](docs/use-cases.md) · [Independent assistants](docs/independent-assistants.md)
 
-## Preview limitations
-
-### Coming in 0.6.0 Preview 1
+## New in 0.6.0 Preview 1
 
 [Skills](docs/skills.md) keep your writing style, research methods and checklists ready to use again. Create your own, import trusted guidance or turn a useful response into a workflow draft. Choose when each Skill applies, keep projects on the version you prefer, and share suitable guidance with specialists.
 
@@ -47,7 +45,7 @@ Teams are easier to follow with separate Active and History views and a Stop con
 
 Skills support written instructions and text references; bundled scripts are not run. Review important output and imported guidance. Connected models and services may incur charges and receive task information; see [Privacy](PRIVACY.md) and [Billing](TOKEN-USAGE-AND-BILLING.md).
 
-### General limitations
+## Preview limitations
 
 This is evaluation software, not a guarantee of production readiness or unattended safety. Keep backups and review important output.
 
