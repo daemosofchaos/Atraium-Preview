@@ -9,6 +9,7 @@ Start with the guide closest to the problem:
 | LM Studio, Ollama or a server used from Android | [Local models](docs/local-models.md) |
 | Workspaces, tools and folder access | [Workspaces and tools](docs/workspaces-and-tools.md) |
 | Supervisor teams, shared limits or interrupted assignments | [Work delegation](docs/supervisor-workspaces.md) |
+| Skills, workflow drafts, requested guidance or version choices | [Skills](docs/skills.md) |
 | PDFs, visuals or saving existing work | [Documents and exports](docs/documents-and-exports.md) |
 | Images or speech | [Images and voice](docs/images-and-voice.md) |
 | An error or an unexpected result | [Troubleshooting](docs/troubleshooting.md) |
@@ -32,6 +33,8 @@ For a bug, include:
 For a tool problem, include its visible source/action and whether it uses Direct or Gateway. For a local model, identify the serving application, model and relevant context/quantization settings when safe to share.
 
 For delegation, include the visible assignment status, whether nested supervision was enabled, the configured limits, and whether the issue followed pause, stop or an application interruption. Use non-sensitive example objectives; do not publish private worker conversations or project files.
+
+For Skills, include your installed version, where you added the Skill, its usage choice and how you tried to use it. If importing failed, include the visible notice. Use a small non-sensitive example; do not attach confidential Skill packages or private drafts.
 
 For a suggestion, explain what you wanted to accomplish, what got in the way and what would make the result useful. A concrete example is more helpful than a feature name alone.
 

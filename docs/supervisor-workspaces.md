@@ -1,32 +1,34 @@
 # Coordinate a team with Supervisor workspaces
 
-**Available in 0.5.0 Preview 1.** Give one assistant a project to coordinate, then let it divide the work into focused assignments, review the results and deliver a consolidated outcome.
+**Introduced in 0.5.0 Preview 1; includes the 0.6.0 Preview 1 improvements.**
 
-A **Supervisor** is a workspace with work delegation enabled. It can create specialist workspaces or assign work to available workspaces in the same Room. Each worker keeps its own conversation, notes, tasks and deliverables. When nested supervision is allowed, a worker can coordinate its own specialists within the project's shared limits.
+Give one assistant a project to coordinate, then let it divide the work into focused assignments, review the results and bring everything together.
 
-You do not need a separate provider account for every worker. Use suitable hosted or local model profiles, with the tools and access needed for the task. A working **Chat** profile is required; **Utility** is optional and uses Chat for supporting work when no ready Utility profile is assigned.
+A **Supervisor** is a workspace with work delegation enabled. It can create specialist workspaces or assign work to available workspaces in the same Room. Each specialist has its own conversation, notes, tasks and deliverables, so you can follow the work without crowding the main project conversation.
+
+Use suitable hosted or local models and give each workspace the tools and access its task needs. You do not need a separate provider account for every specialist.
 
 ## When a team is useful
 
-Delegation is most useful when a project has distinct pieces that can be checked independently.
+Delegation works best when a project has distinct pieces that can be checked independently.
 
-| Project | Possible assignments | Consolidated result |
+| Project | Possible assignments | Combined result |
 |---|---|---|
-| Software review | Tests, documentation and a focused code review. | A prioritised report with file references, evidence and follow-up tasks. |
+| Software review | Tests, documentation and a focused code review. | A prioritised report with evidence and follow-up tasks. |
 | Project costing | Scope review, calculation checks and a client report. | A reconciled workbook and report with assumptions and exclusions. |
 | Product launch | Market research, positioning and presentation preparation. | A sourced launch package with a consistent recommendation. |
 
-For a small, tightly coupled task, one assistant may be simpler. More workers can mean more model requests and coordination, not automatically faster or better results.
+For a small, closely connected task, one assistant may be simpler. Start with a small team: more specialists can mean more coordination and provider charges, not necessarily faster or better results.
 
 ## Start your first delegated project
 
-1. Create or select the project workspace in a Room. Choose a suitable model and review its **Tools & access** settings.
-2. Open **Workspace settings** and turn on **Enable Supervisor delegation**. This setting is independent of the workspace template: a Research board or Coding room can also be a Supervisor.
-3. Review the limits below. For a first trial, keep the scope small and turn off **Allow nested Supervisors** if the workers do not need teams of their own.
-4. Select **Save workspace**, then send an objective that states the sources, assignments, completion criteria and boundaries.
-5. Open **Supervisor assignments** above the workspace to review progress. Use **Open workspace** to inspect a worker's conversation and saved work.
+1. Create or select the project workspace in a Room. Choose a suitable model and review **Tools & access**.
+2. Open **Workspace settings** and turn on **Enable Supervisor delegation**. Any workspace template can be used; you do not need to start again with a different template.
+3. Review the limits below. For a first trial, leave **Allow nested Supervisors** off unless your specialists need teams of their own.
+4. Select **Save workspace**, then send a brief with the objective, sources, assignments and boundaries.
+5. Expand **Supervisor assignments** to follow progress. Choose **Open workspace** to inspect a specialist's conversation and saved work.
 
-For a low-risk repository review, provide the exact repository path and try:
+For a low-risk repository review, supply the exact project path and try:
 
 ```text
 Review the repository at the project path I supplied. Create separate workers for
@@ -39,76 +41,107 @@ create actionable follow-up tasks. Do not edit files, run commands, publish,
 contact external services or delegate further.
 ```
 
-Review the tool policy as well as the prompt. A request to work read-only is not a substitute for disabling actions the project must not use.
+Review tool access as well as the brief. Asking for read-only work is not a substitute for disabling actions the project must not use.
 
 ## Write a brief the team can finish
 
-Give the Supervisor enough information to make each assignment self-contained:
+Include:
 
-- **Outcome:** the files, report, decision or other deliverables that should exist.
-- **Sources:** the exact project paths, supplied documents or permitted research sources.
-- **Responsibilities:** separate areas of work and who should produce the final combined result.
-- **Acceptance criteria:** calculations to reconcile, tests to run or claims to support with evidence.
+- **Outcome:** the report, files, decision or other deliverables you want.
+- **Sources:** the project paths, supplied documents or permitted research sources.
+- **Responsibilities:** separate areas of work and who should combine the results.
+- **Acceptance criteria:** checks to complete and evidence to include.
 - **Boundaries:** whether files may change, commands may run, external research is allowed or further delegation is appropriate.
 
-Do not assume every worker can see every conversation or attachment. Ask the Supervisor to include the relevant material in each brief and identify where outputs are saved. Workers' results inform the project; they do not grant new permissions or replace your instructions.
+Ask the Supervisor to include the relevant material in each assignment; do not assume every specialist can see every conversation or attachment.
 
-For implementation, assign non-overlapping files or folders to workers and keep integration under one owner. A separate workspace does not prevent another assistant, editor or command from changing the same files.
+When several specialists will edit files, give them separate files or folders and put one person or assistant in charge of integration. Different workspaces do not prevent overlapping edits to the same files.
 
 ## Build teams within teams
 
-With **Allow nested Supervisors** enabled, a worker can become a Supervisor for its own part of the project. For example, a launch coordinator could assign a research lead to organise separate competitor and customer reviews, while another worker prepares the presentation.
+With **Allow nested Supervisors** enabled, a specialist can coordinate its own team. A research lead might organise separate competitor and customer reviews while another specialist prepares a presentation.
 
-Nested teams remain in the same Room and share the original project's allowances. A worker cannot expand its inherited tools, file-tool access or delegation limits. It cannot use nesting to create a fresh budget.
+All teams remain in the same Room and share the original project's limits. Creating a nested team does not give it more access or a fresh allowance.
 
-Use nesting when a workstream genuinely needs coordination. Leave it off for a straightforward two-worker review.
+Use nesting when a workstream genuinely needs coordination. Leave it off for a straightforward two-person review.
+
+## Share Skills with specialists
+
+**New in 0.6.0 Preview 1.** Give specialists the working methods they need with [Skills](skills.md)—for example, a source-checking method for a researcher or a release checklist for a reviewer.
+
+Add the Skills to the coordinating Room or workspace, then explain who should use each one:
+
+```text
+Give the documentation reviewer the release-review Skill and the research reviewer
+the source-checking Skill, if they are available to this workspace. Share only the
+guidance each needs. Keep the reviews read-only and do not enable additional tools.
+```
+
+Use a Room or personal library for guidance intended to be shared. Workspace-only Skills stay in that workspace. If a Skill is **Only when requested**, request it in your message before asking the Supervisor to share it.
+
+Work already under way keeps its chosen Skill version when you edit the library. Open **Skills loaded** on a specialist's response if you want to inspect the guidance used, and review important results as you would for any other task. Sharing Skills does not change tool or file access.
 
 ## Understand the shared limits
 
-Workspace settings provide the following defaults and supported ranges:
+Set the size and duration of the team in **Workspace settings**:
 
 | Setting | Default | What it controls |
 |---|---|---|
-| Nested worker depth | 3 | Levels below the coordinating workspace; choose 1–8. |
-| Lifetime worker / creation allowance | 16 | Up to 16 worker assignments and 16 workspace creations over the project's lifetime; choose 1–64. One setting applies to both allowances. |
-| Concurrent model steps | 4 | Model work that can execute at the same time; choose 1–8. |
-| Shared Chat / Utility request budget | 80 | Actual Chat and Utility model requests across the team, including retries and follow-up requests; choose 1–500. |
-| Absolute lifetime (minutes) | 60 | The project's time limit; choose 1–240. |
-| Allow nested Supervisors | On | Whether workers may coordinate teams of their own. |
+| Nested worker depth | 3 | How many levels of specialist teams can be created below the coordinating workspace; choose 1–8. |
+| Lifetime worker / creation allowance | 16 | Up to 16 worker assignments and 16 workspace creations during the project; choose 1–64. One setting applies to both allowances. |
+| Concurrent model steps | 4 | How many specialists can use a model at the same time; choose 1–8. The coordinating Supervisor is separate from this allowance. |
+| Shared Chat / Utility request budget | 80 | The allowance for specialists' new model requests and retries; choose 1–500. See the billing guide for what counts. |
+| Absolute lifetime (minutes) | 60 | The time available for delegated work from the assignment's start; choose 1–240. |
+| Allow nested Supervisors | On | Whether specialists may coordinate teams of their own. |
 
-Allowances are shared across the assignment hierarchy. Completing or deleting a worker does not refund its assignment or creation allowance. Checking progress, waiting for workers and pausing do not extend the deadline. A Supervisor can wait while its workers use the available execution slots; you do not need a slot for every workspace at once.
+These limits apply to the specialists, including nested teams. In **0.6.0 Preview 1**, the coordinating Supervisor can still review their results and finish a handover after their request allowance or time runs out. It cannot start more delegated work beyond the project's limits.
 
-**A request budget is not a spending limit.** It does not cap tokens, media generation, paid integrations or the amount charged by a provider. Set provider-side budgets and quotas, monitor activity and start with a small trial before delegating a long project.
+Finishing or removing a worker does not replenish the project allowance. Waiting, checking progress or pausing does not extend the deadline.
+
+**A request budget is not a spending limit.** Other model activity, tool follow-ups, media generation and paid integrations may still incur charges. Use provider-side budgets and quotas, and monitor usage during a small trial before starting a long project. See [Token usage and billing](https://github.com/daemosofchaos/Atraium-Preview/blob/main/TOKEN-USAGE-AND-BILLING.md).
 
 ## Review progress and results
 
-**Supervisor assignments** shows the hierarchy, assignment status, deadlines, model-request counts and returned worker results. Open an individual workspace for its full conversation and records. If a result is marked as truncated or reports an error, review the underlying work before treating it as complete.
+**Supervisor assignments** stays collapsed until you want it, with a compact count of active work. Expand it to see assignments, status, deadlines, request counts and returned results. Open an individual workspace for its full conversation and deliverables.
 
-Ask the Supervisor to reconcile conflicting findings, verify important claims and produce one final handover. Check actual files, calculations or test results rather than relying only on a completion summary. Notes and tasks remain editable project records, not proof that the deliverables were validated.
+- **Active** shows projects that still have work under way, waiting, paused or closing.
+- **History** shows the latest 10 fully finished projects, including completed, failed, cancelled, expired and interrupted work.
+- **Clear finished** puts the finished projects currently shown out of view. It does not stop work, delete assignments or erase conversations, workspaces and results. Newly finished projects still appear.
+- **Show cleared history** brings dismissed recent projects back; **Hide cleared history** puts them out of view again.
 
-Navigation does not stop an active text assignment. You can visit another workspace and return through the assistant activity menu. Atraium must remain running; this preview is not an always-on cloud service.
+Cleared history is remembered on this device for your Room and workspace. Your saved work remains available even when it is no longer in the recent list.
+
+The panel appears only while **Enable Supervisor delegation** is on. Turning it off and saving hides the panel immediately without deleting assignment history. Turn it on again to access that history.
+
+Ask the Supervisor to reconcile conflicting findings and produce a clear final handover. Check important claims against actual files, sources, calculations or test results. If a summary is shortened or reports an error, inspect the underlying work before treating it as complete.
+
+You can visit other workspaces while text assignments continue. Atraium must remain running; this preview is not an always-on cloud service.
 
 ## Pause, stop or recover work
 
 | Action or status | Meaning |
 |---|---|
-| Stop response | In a delegated assignment, pauses the current response for your input. |
-| Resume (user action) | Explicitly continues a paused assignment from saved conversation state. An assistant cannot resume it on your behalf. |
-| Stop branch | Cancels the selected assignment and its descendants. |
-| Stop all owned trees shown here | Cancels the coordinated projects displayed in that assignments panel. |
-| Cancelling / cleanup pending | Work or resources are still closing; the workspace remains reserved. |
-| Interrupted | Work was interrupted and is not replayed automatically. |
+| Composer Stop | Use **Stop** in the message box to end this workspace's assignment and its team, including queued, waiting or paused work. In an ordinary workspace, it stops the current response. |
+| Resume (user action) | Continue a paused assignment when you are ready. |
+| Stop branch | Cancel the selected assignment and the team working under it. |
+| Stop all owned trees shown here | Cancel the coordinated projects you can control from this panel. |
+| Cancelling / cleanup pending | Work is still closing. Wait before reusing the workspace. |
+| Interrupted | Work stopped unexpectedly and will not restart automatically. |
 
-Stopping does not undo files already changed, messages already sent or other completed external actions. Requests already submitted can still be charged. Paused resources remain subject to their own expiry, and the project deadline still applies.
+Stopping does not undo files already changed, messages already sent or other completed actions. Requests already submitted may still be charged. Pausing does not extend the project deadline.
 
-Wait for cleanup before changing an active workspace's settings, reusing it for another assignment or deleting it. If cleanup reports a failure, **Stop branch** can retry that cleanup without repeating completed work. A deletion blocked by active work must be explicitly retried after cleanup; it does not happen later without your action.
+After **Stop**, the message box keeps your draft and tells you if it is waiting for work to close. You can send again once the workspace is ready. Stopping a specialist's workspace affects that part of the team, not unrelated assignments.
 
-After an application interruption, inspect saved conversations, files and any external effects before starting a new attempt. Do not blindly repeat an assignment that may already have completed part of its work.
+Wait for closing work before changing settings, assigning new work to that workspace or deleting it. If closing reports a failure, use **Stop** or **Stop branch** to try again. If deletion was blocked, retry it after the work has closed.
+
+After an application interruption, review saved conversations, deliverables and any external effects before starting a new attempt. Finished results are retained, but unfinished work is not restarted automatically. Avoid repeating a task that may already have changed files or completed part of its work.
+
+If an assignment is still running in another Atraium instance, control it there. A rejected prompt keeps your draft and attachments so you can try again when the workspace is available.
 
 ## Keep access and data appropriate
 
-Delegation does not turn workspace organization into a security sandbox. File tools remain subject to the configured access policy and operating-system permissions; shell commands, desktop control, MCP servers and plugins have their own capabilities. Do not give untrusted work broad executable access expecting a workspace boundary to contain it.
+Choose trusted tools and give each workspace only the access its task needs. A separate workspace is a way to organise work, not a security sandbox for commands, plugins or connected services.
 
-Review every model and service involved before supplying sensitive information. Project briefs, worker results and tool output included in requests can be sent to the configured providers. A local Chat profile does not make a project offline if another capability or integration uses a remote service.
+Review every model and service involved before supplying sensitive information. Project briefs, worker results and tool output can be sent to the configured providers. A local Chat model does not make a project offline if another capability uses a remote service.
 
 [Documentation](README.md) · [Practical examples](use-cases.md) · [Troubleshooting](troubleshooting.md)

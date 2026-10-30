@@ -50,6 +50,7 @@ Review the hierarchy, status, deadlines and returned results in **Supervisor ass
 | Surface | What belongs there |
 |---|---|
 | Chat | Questions, exploration and feedback. |
+| Skills | Reusable methods and checklists, with workspace choices and next-message requests in 0.6.0 Preview 1. |
 | Notes | Briefs, decisions, findings and requirements worth keeping. |
 | Tasks | Concrete actions, priorities, due dates and completion state. |
 | Artifacts | Generated documents available to open or download. |
@@ -68,6 +69,12 @@ mark only the task we actually finished as complete.
 ```
 
 Generated images and uploaded files also appear as conversation attachments. [Save messages and original files](documents-and-exports.md#save-messages-and-original-files) when you need copies outside Atraium.
+
+## Reuse guidance without rewriting the Room
+
+In **0.6.0 Preview 1**, use the workspace's **Skills** tab to add guidance and choose When relevant, Only when requested or Off. Room choices can be inherited or overridden per workspace. The compact message-box picker requests a Skill for just the next message; it does not send the message or change settings.
+
+Projects keep their chosen Skill version until you decide to update it. Share appropriate guidance with specialists when coordinating a team. Skills do not change tool or file access. [Skills guide](skills.md) · [Sharing with specialists](supervisor-workspaces.md#share-skills-with-specialists).
 
 ## Choose a model for the project
 
@@ -123,6 +130,6 @@ Atraium remembers the selected workspace in each Room. An active text response c
 
 Closing the application is different from navigation and can interrupt active work. Before retrying, check what already completed. Stopping a response does not undo saved files or external actions, and requests already sent may still be billed.
 
-In a delegated assignment, **Stop response** pauses for your input; **Resume (user action)** explicitly continues it. **Stop branch** cancels an assignment and its descendants. Wait for cleanup before reusing or deleting the workspace. Interrupted delegated work is not replayed automatically. [Pause, stop and recovery](supervisor-workspaces.md#pause-stop-or-recover-work).
+In **0.6.0 Preview 1**, **Stop** in the message box ends this workspace's assignment and its team, including paused or waiting work. **Resume (user action)** continues an assignment already paused for input; it does not undo cancellation. Wait for work to close before reusing or deleting a workspace. Interrupted work does not restart automatically. [Pause, stop and recovery](supervisor-workspaces.md#pause-stop-or-recover-work).
 
 [Use cases](use-cases.md) · [Security](../SECURITY.md) · [Troubleshooting](troubleshooting.md) · [Documentation](README.md)

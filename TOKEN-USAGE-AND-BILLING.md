@@ -37,13 +37,21 @@ For example, a local Chat model can still produce remote charges if Utility, sea
 
 ## Budget for a coordinated team
 
-A Supervisor and its workers can make several model requests for one project. Nested teams add to the same shared Chat / Utility request allowance; retries and follow-up requests also count. Completing a worker does not restore the project's used allowances, and checking progress does not extend its deadline.
+A Supervisor and its specialists can make several model requests for one project. In **0.6.0 Preview 1**, the shared request allowance covers specialists' new Chat and Utility requests and retries, including nested teams. Follow-up requests after a tool runs, and the coordinating Supervisor's own requests, are outside that allowance but may still incur charges.
+
+Finishing a specialist's work does not replenish the allowance, and checking progress does not extend the deadline. The Supervisor can still review results and finish a handover after the specialists reach their limits.
 
 **Delegation limits are not monetary spending caps.** They do not fix the number of tokens in each request or cap separately billed search, media, MCP services or infrastructure. More workers are not automatically cheaper or faster.
 
 Begin with a small team, modest concurrency and a narrow brief. Review the model and capability profiles involved, set provider-side budgets and quotas, and monitor every relevant account. Stopping a branch does not reverse completed tool actions or charges already incurred.
 
 [Supervisor limits and controls](docs/supervisor-workspaces.md#understand-the-shared-limits)
+
+## Using Skills
+
+**Skills are introduced in 0.6.0 Preview 1.** Using them can contribute to normal model usage, both when the assistant chooses suitable guidance and when it works with the instructions and references you supply. Charges depend on the models and services you have connected.
+
+Review all connected providers even if your main Chat model is local. Keep Skills focused, monitor usage and set provider-side budgets. Turning a Skill **Off** prevents future use; it does not refund earlier charges. [Skills guide](docs/skills.md).
 
 ## Use cost-appropriate settings
 

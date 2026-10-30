@@ -4,6 +4,23 @@ Give an assistant a complete piece of work: a working application, an auditable 
 
 Create a separate workspace for a distinct project and provide the necessary tools and access. Smaller examples follow the complete-project briefs; they are useful for learning a feature or checking a new connection. Tool use and follow-up model requests can consume additional provider quota.
 
+## Reuse a method with a Skill
+
+**You need:** 0.6.0 Preview 1, a working Chat model and a trusted Skill made available to this workspace. In Settings → Skills, create `release-review` with steps for checking scope, compatibility, evidence and unresolved risks. Add it to the workspace and choose **Only when requested**.
+
+Select it from the message box's Skills picker, then type:
+
+```text
+Review the supplied release proposal using the requested release-review Skill.
+Check the stated scope, compatibility changes and available verification evidence.
+Separate checks you performed from checks still needed. Save the findings as a
+workspace note. Do not edit files, publish, spend money or contact external services.
+```
+
+**What you should receive:** a review tied to the supplied material, with missing evidence clearly identified. Check **Skills loaded** for the guidance supplied; it does not prove the assistant complied. After a useful completed response, **Save this workflow as a Skill** opens an editable draft—remove private facts and review it before making it available.
+
+Use reusable Skills for the method, notes for project facts, and tasks for progress. [Skills guide](skills.md) · [Share guidance with workers](supervisor-workspaces.md#share-skills-with-specialists).
+
 ## Build a complete application from a brief
 
 **You need:** Windows, a capable coding/tool model, a new writable project folder, file and command tools, and the SDKs required by your chosen stack. This example uses the [.NET 10 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/10.0). Allow dependency restore and build/test commands within that folder; Atraium does not install the development environment for you.

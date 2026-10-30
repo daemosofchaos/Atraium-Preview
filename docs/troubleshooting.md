@@ -86,7 +86,7 @@ For MCP, check the server endpoint or desktop command, required runtime, credent
 | The assistant cannot create or assign workers | Version 0.5.0 Preview 1 or later; Enable Supervisor delegation saved in Workspace settings; relevant tools available. |
 | A target workspace is unavailable | It must be in the same Room, not archived and not already occupied by active work. |
 | A worker cannot create its own team | Allow nested Supervisors must be enabled, with depth and worker allowances remaining. |
-| The project reaches a limit | Shared worker/creation allowances, actual Chat / Utility requests and the absolute deadline; finished workers do not refund used allowances. |
+| The project reaches a limit | Check the specialists' assignment, request and time limits. In 0.6.0 Preview 1 the Supervisor can still review results and finish the handover. Request limits are not spending caps. |
 | Work is waiting for input | Review the paused assignment and explicitly choose Resume (user action). Checking progress does not resume it. |
 | Stop has not released the workspace | Wait for real cleanup. If cleanup reports a failure, Stop branch can retry cleanup without replaying completed work. |
 | An assignment is Interrupted after restarting | Inspect saved progress and external effects before explicitly starting another attempt; no automatic replay occurs. |
@@ -95,6 +95,27 @@ For MCP, check the server endpoint or desktop command, required runtime, credent
 Do not increase all limits or broaden file access as a first repair step. Check the specific error and try a small, low-risk assignment. Provider errors and quotas can also stop work; retries may be billable.
 
 [Supervisor guide](supervisor-workspaces.md) · [Team example](use-cases.md#coordinate-a-repository-review-with-a-team)
+
+### Supervisor panel and history in 0.6.0 Preview 1
+
+**Supervisor assignments** appears only when Supervisor is enabled for the current workspace. Turning it off and saving removes the panel without deleting records; re-enable it to inspect saved history. Stop active work and wait for cleanup before changing settings.
+
+Finished work is in **History**, not Active. **Clear finished** puts displayed projects out of view; **Show cleared history** brings recent dismissed projects back. After an interruption, inspect saved work before starting another attempt. Unfinished assignments do not restart automatically.
+
+## A Skill is missing or not being used
+
+**Skills require 0.6.0 Preview 1.** The 0.5.0 downloads do not include them.
+
+| Symptom | What to check |
+|---|---|
+| Missing from Add Skills | Library scope, archive state and whether a draft needs Make available. |
+| Manual guidance was not used | Request it with a chip or in your own typed question; a marker inside quoted text is not a request. |
+| A Skill was not used | Check that it is added to the workspace and set to When relevant. To ask for a particular method, choose it in the message box. |
+| The wrong version appears | Explicitly Update to latest version, then start a new request. Existing work keeps its selected version. |
+| A requested chip prevents sending | Remove the unavailable chip, refresh the picker and choose an available version; the draft is retained. |
+| Import excludes content | Review the notices; only supported text is stored and bundled scripts are not run. |
+
+Do not broaden tool/file access to repair a missing Skill. **Skills loaded** records supplied guidance, not proof of compliance. [Skills guide](skills.md).
 
 ## A file cannot be read or saved
 

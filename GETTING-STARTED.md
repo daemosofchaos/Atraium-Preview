@@ -112,11 +112,20 @@ Use **Supervisor assignments** to follow progress and open workers' workspaces. 
 
 ## Add only what your next task needs
 
+### Reuse a workflow with Skills
+
+**For 0.6.0 Preview 1**, open **Settings → Skills** to create or import reusable instructions, then add them from the workspace's **Skills** tab. Choose When relevant, Only when requested or Off. The message box's Skills picker requests guidance for only the next message without sending it.
+
+Start with one focused method you use often. After a useful completed response, **Message actions → Save this workflow as a Skill** opens a draft you can refine for next time. Remove project-specific or confidential details and review it before making it available.
+
+The current 0.5.0 downloads do not include Skills. Follow the [Skills guide](docs/skills.md) and [0.6.0 Preview 1 notes](release-notes/v0.6.0-preview.1.md) when that preview is available.
+
 | Want to… | Add… |
 |---|---|
 | Build an application | A capable coding/tool model, an approved writable project folder, file/command tools and the required SDKs. |
 | Produce a complete costing | Scope, quantities, rates/quotes, spreadsheet/PDF tools and an output folder. |
 | Coordinate several workstreams | Supervisor delegation, focused assignments, shared limits and tools/access appropriate to each worker. |
+| Reuse a checklist or working method | A Skill created or imported in Settings; available from 0.6.0 Preview 1. |
 | Research current information | A **Brave Search API key** in Web grounding; this is separate from model profiles. |
 | Work with local files | Access to the specific working folder and the relevant tools. |
 | Create images | A separate image-capable profile assigned to Image generation. |

@@ -10,7 +10,9 @@ Hosted and local models connect to coding, research and document tools, with con
 
 For projects with several workstreams, **Supervisor workspaces** let an assistant create focused workers, collect their results and bring the work together. Workers can coordinate teams of their own when you allow it, with shared limits and visible assignment progress.
 
-[Download](#download) · [Get started](GETTING-STARTED.md) · [Work delegation](docs/supervisor-workspaces.md) · [Connect a model](docs/model-setup.md) · [Documentation](docs/README.md) · [Official website](https://atraium.com)
+**Coming in 0.6.0 Preview 1: Skills.** Keep reusable methods and checklists, request guidance for one message, and turn a useful response into a reviewed workflow draft. [Read the prepared release notes](release-notes/v0.6.0-preview.1.md).
+
+[Download](#download) · [Get started](GETTING-STARTED.md) · [Skills](docs/skills.md) · [Work delegation](docs/supervisor-workspaces.md) · [Connect a model](docs/model-setup.md) · [Documentation](docs/README.md) · [Official website](https://atraium.com)
 
 ## What would you delegate?
 
@@ -30,17 +32,27 @@ Codex and Claude Code also perform autonomous work. Choose Atraium when you want
 
 ## One project, a coordinated team
 
-**New in 0.5.0 Preview 2:** enable **Supervisor delegation** in Workspace settings to divide a project into focused assignments within the same Room. Each worker has its own conversation and saved work; the Supervisor reviews the results and produces the combined outcome.
+**Introduced in 0.5.0 Preview 1:** enable **Supervisor delegation** in Workspace settings to divide a project into focused assignments within the same Room. Each worker has its own conversation and saved work; the Supervisor reviews the results and produces the combined outcome.
 
 For example, ask for separate read-only reviews of a repository's tests and documentation, then one prioritised report with evidence and follow-up tasks. For larger projects, **Allow nested Supervisors** lets a workstream lead organise its own specialists.
 
 - **Follow the work:** inspect the assignment hierarchy, open worker workspaces and review returned results.
 - **Set shared limits:** control team size, nesting depth, concurrent model work, request counts and duration.
-- **Stay in control:** pause for input, explicitly resume, or stop a branch and its descendants. Completed external actions are not undone.
+- **Stay in control:** resume work paused for your input, or stop an assignment and the team working under it. Completed actions are not undone.
 
 Delegation does not create a file sandbox or a provider spending cap. Assign non-overlapping file responsibilities, review important results and keep provider-side budgets in place.
 
 [Start a delegated project](docs/supervisor-workspaces.md#start-your-first-delegated-project) · [Try a team review](docs/use-cases.md#coordinate-a-repository-review-with-a-team)
+
+## Skills: keep your methods ready
+
+**In 0.6.0 Preview 1**, create a writing style, research method or release checklist in **Settings → Skills**, or import a trusted Agent Skills ZIP. Add it to a Room or workspace and choose **When relevant**, **Only when requested** or **Off**.
+
+Request guidance for just the next message with the compact **Skills** picker. A removable version-labelled chip stays separate from your typed question. Save a completed response with **Message actions → Save this workflow as a Skill**, edit the preview into a repeatable method and review the draft before making it available.
+
+Keep the same approach across projects, or share the right guidance with each specialist in a Supervisor team. Improve your Skills as you work; existing projects keep their chosen version until you decide to update them.
+
+[Skills guide](docs/skills.md) · [Share guidance with specialists](docs/supervisor-workspaces.md#share-skills-with-specialists)
 
 ## Download
 
@@ -55,6 +67,8 @@ The latest public release is **[0.5.0 Preview 2](https://github.com/daemosofchao
 | [SHA-256 checksums](https://github.com/daemosofchaos/Atraium-Preview/releases/download/v0.5.0-preview.2/Atraium-0.5.0-preview.2-SHA256SUMS.txt) | Verify the package before installing or running it. |
 
 [All releases](https://github.com/daemosofchaos/Atraium-Preview/releases) · [What's new in 0.5.0](release-notes/v0.5.0-preview.2.md) · [Installation instructions](GETTING-STARTED.md#install-atraium)
+
+The 0.6.0 Preview 1 notes and guides are prepared here for the next preview. They do not announce available 0.6.0 downloads; use the published release above until new packages are listed on official Releases.
 
 > **Bring-your-own-model means bring-your-own account or server.** Atraium does not include model downloads, API keys or credits. A ChatGPT, Claude or Gemini consumer subscription is not necessarily an API account. You are responsible for provider and infrastructure charges; set provider-side spending limits before adding a paid key. See [Billing](TOKEN-USAGE-AND-BILLING.md).
 

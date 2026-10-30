@@ -43,6 +43,16 @@ Review every configured profile and integration, not only the main assistant mod
 
 ## Tools, MCP servers, and plugins
 
+### Skills and reusable guidance
+
+**Skills are introduced in 0.6.0 Preview 1.** Your Skill drafts, instructions and references are stored with local application data. Exporting a Skill creates a shareable file; review its contents for credentials and confidential information before sending it to anyone.
+
+Choosing and using Skills may send your question, Skill names and descriptions, and the instructions or references needed for the task to your configured models. Review all connected providers, including supporting models, if this information must stay on your device. A local main Chat model does not make every part of a workflow local.
+
+When you choose **Save this workflow as a Skill**, check the editable preview before saving or sharing it. Automatic cleanup can help remove sensitive details, but it does not replace your review. [Skills guide](docs/skills.md).
+
+### Executable integrations
+
 Built-in tools, MCP servers, and plugins can have different data access and network behaviour.
 
 - Enable only the tool sources and operations required for the job.
