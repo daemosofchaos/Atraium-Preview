@@ -8,22 +8,22 @@ Install the preview, connect one model, and give your assistant a small task. Yo
 
 ## Install Atraium
 
-Download a package and its checksum manifest from the [official release](https://github.com/daemosofchaos/Atraium-Preview/releases/tag/v0.6.0-preview.1). The [README download table](README.md#download) explains the choices.
+Download a package and its checksum manifest from the [official release](https://github.com/daemosofchaos/Atraium-Preview/releases/tag/v0.6.1-preview.1). The [README download table](README.md#download) explains the choices.
 
 ### Verify your download
 
-Calculate SHA-256 for the exact file and compare it with the matching filename in `Atraium-0.6.0-preview.1-SHA256SUMS.txt`.
+Calculate SHA-256 for the exact file and compare it with the matching filename in `Atraium-0.6.1-preview.1-SHA256SUMS.txt`.
 
 For the Windows installer:
 
 ```powershell
-Get-FileHash .\Atraium-0.6.0-preview.1-win-x64-setup.exe -Algorithm SHA256
+Get-FileHash .\Atraium-0.6.1-preview.1-win-x64-setup.exe -Algorithm SHA256
 ```
 
 For the portable archive:
 
 ```powershell
-Get-FileHash .\Atraium-0.6.0-preview.1-win-x64-portable.zip -Algorithm SHA256
+Get-FileHash .\Atraium-0.6.1-preview.1-win-x64-portable.zip -Algorithm SHA256
 ```
 
 For an APK, calculate the hash on a computer or with a trusted device utility. If it differs from the manifest, **do not install or run the file**; download it again from the official release.
@@ -118,7 +118,7 @@ Open **Settings → Skills** to create or import reusable instructions, then add
 
 Start with one focused method you use often. After a useful completed response, **Message actions → Save this workflow as a Skill** opens a draft you can refine for next time. Remove project-specific or confidential details and review it before making it available.
 
-[Skills guide](docs/skills.md) · [0.6.0 Preview 1 release notes](release-notes/v0.6.0-preview.1.md)
+[Skills guide](docs/skills.md) · [0.6.1 Preview 1 release notes](release-notes/v0.6.1-preview.1.md)
 
 | Want to… | Add… |
 |---|---|
